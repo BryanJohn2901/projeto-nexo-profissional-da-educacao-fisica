@@ -142,7 +142,7 @@
   }
   ::-webkit-scrollbar { width: 8px; }
   ::-webkit-scrollbar-track { background: #0B0B14; }
-  ::-webkit-scrollbar-thumb { background: #FD191D; border-radius: 999px; }
+  ::-webkit-scrollbar-thumb { background: linear-gradient(to bottom, #FD191D, #B000FF, #FF3D9A); border-radius: 999px; }
 
   .popup-form input:invalid.touched {
     border-color: #ef4444;
@@ -250,15 +250,19 @@
 <main>
 
   <!-- HERO -->
-  <section id="hero" class="relative isolate overflow-hidden px-6 pt-20 md:pt-28 pb-20 md:pb-28">
-    <div class="absolute inset-0 -z-10">
-      <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=1600&q=80" alt="Treinamento feminino" class="w-full h-full object-cover object-[70%_30%]">
-      <div class="absolute inset-0 bg-gradient-to-r from-brand-bg via-brand-bg/95 to-brand-bg/50"></div>
-      <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(11,11,20,0.7) 0%, rgba(11,11,20,0.5) 55%, rgba(11,11,20,0.5) 78%, rgba(11,11,20,0) 100%);"></div>
+  <section id="hero" class="relative isolate overflow-hidden bg-brand-bg md:bg-transparent px-6 pt-0 md:pt-28 pb-20 md:pb-28">
+    <div class="relative block md:hidden -mx-6 w-[calc(100%+3rem)] max-w-none">
+      <img src="img/mobile.webp" alt="Treinamento feminino" class="block w-full h-auto">
+      <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-b from-transparent to-brand-bg pointer-events-none"></div>
     </div>
-    <div class="container mx-auto max-w-[1300px] text-left">
+    <div class="hidden md:block absolute inset-0 -z-10">
+      <img src="img/web.webp" alt="Treinamento feminino" class="w-full h-full object-cover object-[70%_30%]">
+      <div class="absolute inset-0 bg-gradient-to-r from-brand-bg/70 via-brand-bg/40 to-brand-bg/10"></div>
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(11,11,20,0.35) 0%, rgba(11,11,20,0.2) 55%, rgba(11,11,20,0.2) 78%, rgba(11,11,20,0) 100%);"></div>
+    </div>
+    <div class="container mx-auto max-w-[1300px] text-center md:text-left flex flex-col items-center md:items-start pt-8 md:pt-0">
 
-      <img src="img/logo-color.svg" alt="TIMM Eventos" data-aos="fade-up" class="h-12 md:h-14 w-auto mb-8">
+      <img src="img/logo-color.svg" alt="TIMM Eventos" data-aos="fade-up" class="h-12 md:h-14 w-auto mb-8 mx-auto md:mx-0">
 
       <h1 data-aos="fade-up" data-aos-delay="100" class="font-title text-4xl md:text-5xl font-extrabold leading-tight mb-6 max-w-3xl">
         O conhecimento que está moldando o<br>
@@ -269,7 +273,7 @@
         Em um único dia, aprenda com 7 especialistas como prescrever com mais segurança, gerar melhores resultados e acompanhar as principais atualizações da área.
       </p>
 
-      <div data-aos="fade-up" data-aos-delay="300" class="flex flex-wrap items-center justify-start gap-4 mb-10">
+      <div data-aos="fade-up" data-aos-delay="300" class="flex flex-wrap items-center justify-center md:justify-start gap-4 mb-10">
         <div class="glass rounded-full px-5 py-2.5 flex items-center gap-2 text-sm font-semibold">
           <i class="fa-regular fa-calendar text-brand-accent"></i>
           27 de setembro &bull; Online e ao vivo
@@ -623,7 +627,7 @@
             <div class="card-tilt relative rounded-3xl overflow-hidden aspect-[4/5] glass">
               <div class="card-tilt-sheen"></div>
               <span class="absolute top-4 left-4 z-10 text-6xl font-black text-white/10">01</span>
-              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=1000&h=1250&fit=crop&q=80" alt="Carlos Garon" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+              <img src="img/Carlos_Garon.webp" alt="Carlos Garon" class="w-full h-full object-cover grayscale-0 md:grayscale md:hover:grayscale-0 transition duration-500">
             </div>
           </div>
           <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="100" class="w-full md:w-3/5">
@@ -641,7 +645,7 @@
             <div class="card-tilt relative rounded-3xl overflow-hidden aspect-[4/5] glass">
               <div class="card-tilt-sheen"></div>
               <span class="absolute top-4 left-4 z-10 text-6xl font-black text-white/10">02</span>
-              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=1000&h=1250&fit=crop&q=80" alt="Antonio Arruda" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+              <img src="img/Antonio_Arruda.webp" alt="Antonio Arruda" class="w-full h-full object-cover grayscale-0 md:grayscale md:hover:grayscale-0 transition duration-500">
             </div>
           </div>
           <div data-aos="fade-right" data-aos-duration="900" data-aos-delay="100" class="w-full md:w-3/5">
@@ -659,7 +663,7 @@
             <div class="card-tilt relative rounded-3xl overflow-hidden aspect-[4/5] glass">
               <div class="card-tilt-sheen"></div>
               <span class="absolute top-4 left-4 z-10 text-6xl font-black text-white/10">03</span>
-              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=1000&h=1250&fit=crop&q=80" alt="Santiago Paes" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+              <img src="img/Santiago_Paes.webp" alt="Santiago Paes" class="w-full h-full object-cover grayscale-0 md:grayscale md:hover:grayscale-0 transition duration-500">
             </div>
           </div>
           <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="100" class="w-full md:w-3/5">
@@ -677,7 +681,7 @@
             <div class="card-tilt relative rounded-3xl overflow-hidden aspect-[4/5] glass">
               <div class="card-tilt-sheen"></div>
               <span class="absolute top-4 left-4 z-10 text-6xl font-black text-white/10">04</span>
-              <img src="img/pimenta.webp" alt="Luciana Pimenta" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+              <img src="img/Luciana_pimenta.webp" alt="Luciana Pimenta" class="w-full h-full object-cover grayscale-0 md:grayscale md:hover:grayscale-0 transition duration-500">
             </div>
           </div>
           <div data-aos="fade-right" data-aos-duration="900" data-aos-delay="100" class="w-full md:w-3/5">
@@ -695,7 +699,7 @@
             <div class="card-tilt relative rounded-3xl overflow-hidden aspect-[4/5] glass">
               <div class="card-tilt-sheen"></div>
               <span class="absolute top-4 left-4 z-10 text-6xl font-black text-white/10">05</span>
-              <img src="img/pimenta2.webp" alt="Fábio Chiodini" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+              <img src="img/Fabio_Chiodini.webp" alt="Fábio Chiodini" class="w-full h-full object-cover grayscale-0 md:grayscale md:hover:grayscale-0 transition duration-500">
             </div>
           </div>
           <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="100" class="w-full md:w-3/5">
@@ -713,15 +717,15 @@
             <div class="card-tilt relative rounded-3xl overflow-hidden aspect-[4/5] glass">
               <div class="card-tilt-sheen"></div>
               <span class="absolute top-4 left-4 z-10 text-6xl font-black text-white/10">06</span>
-              <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?w=1000&h=1250&fit=crop&q=80" alt="Bruno Breno" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+              <img src="img/bruno_nobre.webp" alt="Bruno Nobre" class="w-full h-full object-cover grayscale-0 md:grayscale md:hover:grayscale-0 transition duration-500">
             </div>
           </div>
           <div data-aos="fade-right" data-aos-duration="900" data-aos-delay="100" class="w-full md:w-3/5">
             <div class="h-1 w-10 rounded-full bg-gradient-to-r from-brand-accent to-brand-accent2 mb-4"></div>
-            <h3 class="text-2xl md:text-3xl font-black text-white mb-3">Bruno Breno</h3>
+            <h3 class="text-2xl md:text-3xl font-black text-white mb-3">Bruno Nobre</h3>
             <p class="text-brand-textSecondary leading-relaxed mb-5">Exercício físico no pós-cirurgia bariátrica. Critérios de prescrição por fase pós-operatória, sinais de alerta e adaptações necessárias para treinar essas alunas com segurança.</p>
             <a href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-bold text-brand-primary hover:text-white transition-colors duration-500">
-              <i class="fa-brands fa-instagram text-lg"></i> @bruno.breno
+              <i class="fa-brands fa-instagram text-lg"></i> @bruno.nobre
             </a>
           </div>
         </div>
@@ -731,7 +735,7 @@
             <div class="card-tilt relative rounded-3xl overflow-hidden aspect-[4/5] glass">
               <div class="card-tilt-sheen"></div>
               <span class="absolute top-4 left-4 z-10 text-6xl font-black text-white/10">07</span>
-              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=1000&h=1250&fit=crop&q=80" alt="Henrique Battista" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+              <img src="img/henrique_batista.webp" alt="Henrique Battista" class="w-full h-full object-cover grayscale-0 md:grayscale md:hover:grayscale-0 transition duration-500">
             </div>
           </div>
           <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="100" class="w-full md:w-3/5">
