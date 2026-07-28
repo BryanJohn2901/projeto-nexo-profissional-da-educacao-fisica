@@ -25,8 +25,8 @@
             bg: '#0B0B14',
             surface: '#13131F',
             darkgray: '#0F0F18',
-            primary: '#FD191D',
-            primaryHover: '#D4140F',
+            primary: '#D4A017',
+            primaryHover: '#A87A0F',
             accent: '#B000FF',
             success: '#22C55E',
             whatsapp: '#25D366',
@@ -47,8 +47,8 @@
             '50%': { transform: 'translateY(-20px)' }
           },
           glowPulse: {
-            '0%, 100%': { boxShadow: '0 0 0 0 rgba(253,25,29,0.55)', transform: 'scale(1)' },
-            '50%': { boxShadow: '0 0 0 16px rgba(253,25,29,0)', transform: 'scale(1.035)' }
+            '0%, 100%': { boxShadow: '0 0 0 0 rgba(199,155,29,0.55)', transform: 'scale(1)' },
+            '50%': { boxShadow: '0 0 0 16px rgba(199,155,29,0)', transform: 'scale(1.035)' }
           },
           glowPulseGreen: {
             '0%, 100%': { boxShadow: '0 0 0 0 rgba(37,211,102,0.65)', transform: 'scale(1)' },
@@ -101,7 +101,7 @@
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    background: radial-gradient(420px circle at var(--x, 50%) var(--y, 50%), rgba(253,25,29,0.16), transparent 70%);
+    background: radial-gradient(420px circle at var(--x, 50%) var(--y, 50%), rgba(199,155,29,0.16), transparent 70%);
     opacity: 0;
     transition: opacity 0.5s ease;
     pointer-events: none;
@@ -140,7 +140,7 @@
   }
   ::-webkit-scrollbar { width: 8px; }
   ::-webkit-scrollbar-track { background: #0B0B14; }
-  ::-webkit-scrollbar-thumb { background: #FD191D; border-radius: 999px; }
+  ::-webkit-scrollbar-thumb { background: #D4A017; border-radius: 999px; }
 
   .popup-form input:invalid.touched {
     border-color: #ef4444;
@@ -184,6 +184,16 @@
     opacity: 1;
   }
 
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 70s linear infinite;
+  }
+  @keyframes marquee-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
   .nexo-logo-fill {
     fill: #ffffff;
     transition: fill 0.5s ease;
@@ -220,9 +230,9 @@
         Edição Comemorativa &bull; Mês do Profissional de Educação Física
       </div>
 
-      <h1 data-aos="fade-up" data-aos-delay="100" class="font-title text-4xl md:text-6xl font-extrabold leading-tight mb-6 max-w-3xl">
-        O conhecimento que está moldando o
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">futuro do treinamento feminino</span>.
+      <h1 data-aos="fade-up" data-aos-delay="100" class="font-title text-4xl md:text-5xl font-extrabold leading-tight mb-6 max-w-3xl">
+        O conhecimento que está moldando o<br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">futuro do TREINAMENTO FEMININO</span>.
       </h1>
 
       <p data-aos="fade-up" data-aos-delay="200" class="text-brand-textSecondary text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
@@ -254,6 +264,128 @@
 
     </div>
   </section>
+
+  <!-- FAIXA ROLANTE -->
+  <div class="relative z-10 overflow-hidden border-y border-white/5 bg-gradient-to-r from-brand-primary via-brand-accent to-[#FF3D9A] py-3">
+    <div class="marquee-track">
+      <span class="flex items-center shrink-0">
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+      </span>
+      <span class="flex items-center shrink-0" aria-hidden="true">
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">13 anos</span>
+        <span class="text-white/50">&bull;</span>
+      </span>
+    </div>
+  </div>
 
   <!-- EVENTO / SOBRE -->
   <section id="evento" class="relative has-grid-fx px-6 py-28">
@@ -307,6 +439,144 @@
       </div>
     </div>
   </section>
+
+  <!-- FAIXA ROLANTE -->
+  <div class="relative z-10 overflow-hidden border-y border-white/5 bg-gradient-to-r from-brand-primary via-brand-accent to-[#FF3D9A] py-3">
+    <div class="marquee-track">
+      <span class="flex items-center shrink-0">
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">R$&nbsp;49,90</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 horas</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 palestras</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">1 único congresso</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">R$&nbsp;49,90</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 horas</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 palestras</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">1 único congresso</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">R$&nbsp;49,90</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 horas</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 palestras</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">1 único congresso</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">R$&nbsp;49,90</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 horas</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 palestras</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">1 único congresso</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">R$&nbsp;49,90</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 horas</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 palestras</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">1 único congresso</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">R$&nbsp;49,90</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 horas</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 palestras</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">1 único congresso</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">R$&nbsp;49,90</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 horas</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 palestras</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">1 único congresso</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">R$&nbsp;49,90</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 horas</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 palestras</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">1 único congresso</span>
+        <span class="text-white/50">&bull;</span>
+      </span>
+      <span class="flex items-center shrink-0" aria-hidden="true">
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">R$&nbsp;49,90</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 horas</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 palestras</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">1 único congresso</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">R$&nbsp;49,90</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 horas</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 palestras</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">1 único congresso</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">R$&nbsp;49,90</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 horas</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 palestras</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">1 único congresso</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">R$&nbsp;49,90</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 horas</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 palestras</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">1 único congresso</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">R$&nbsp;49,90</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 horas</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 palestras</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">1 único congresso</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">R$&nbsp;49,90</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 horas</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 palestras</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">1 único congresso</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">R$&nbsp;49,90</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 horas</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 palestras</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">1 único congresso</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">R$&nbsp;49,90</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 horas</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">7 palestras</span>
+        <span class="text-white/50">&bull;</span>
+        <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">1 único congresso</span>
+        <span class="text-white/50">&bull;</span>
+      </span>
+    </div>
+  </div>
 
   <!-- PALESTRANTES -->
   <section id="palestrantes" class="relative has-grid-fx px-6 py-28">
@@ -511,10 +781,10 @@
       <div class="grid md:grid-cols-2 gap-6 items-stretch max-w-3xl mx-auto">
 
         <!-- LOTE 1 -->
-        <button type="button" data-aos="fade-up" data-aos-delay="0" data-checkout-url="#" data-plano="Lote 1 - Acesso Antecipado" class="btn-checkout-trigger group relative flex flex-col text-left w-full cursor-pointer rounded-[28px] border border-brand-primary/70 bg-gradient-to-b from-brand-bg to-[#0d0612] px-8 py-10 md:px-8 md:py-12 shadow-[0_10px_40px_rgba(253,25,29,0.12)] hover:shadow-[0_24px_70px_rgba(253,25,29,0.28)] hover:-translate-y-1.5 transition-all duration-500">
-          <span class="absolute -top-4 left-1/2 -translate-x-1/2 z-20 whitespace-nowrap rounded-full bg-brand-primary px-5 py-1.5 text-[10px] font-black uppercase tracking-[0.16em] text-white shadow-[0_8px_24px_rgba(253,25,29,0.45)]">Mais escolhido</span>
+        <button type="button" data-aos="fade-up" data-aos-delay="0" data-checkout-url="#" data-plano="Lote 1 - Acesso Antecipado" class="btn-checkout-trigger group relative flex flex-col text-left w-full cursor-pointer rounded-[24px] border border-brand-primary/70 bg-gradient-to-b from-brand-bg to-[#0d0612] px-8 py-10 md:px-8 md:py-12 shadow-[0_10px_40px_rgba(199,155,29,0.12)] hover:shadow-[0_24px_70px_rgba(199,155,29,0.28)] hover:-translate-y-1.5 transition-all duration-500">
+          <span class="absolute -top-4 left-1/2 -translate-x-1/2 z-20 whitespace-nowrap rounded-md bg-brand-primary px-5 py-1.5 text-[10px] font-black uppercase tracking-[0.16em] text-white shadow-[0_8px_24px_rgba(199,155,29,0.45)]">Mais escolhido</span>
           <div class="text-center mb-7 pt-2">
-            <div class="w-14 h-14 mx-auto rounded-full bg-gradient-to-br from-brand-primary/30 to-brand-primary/5 border border-brand-primary/40 text-brand-primary flex items-center justify-center mb-5 text-xl shadow-[0_0_24px_rgba(253,25,29,0.25)]">
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-brand-primary/30 to-brand-primary/5 border border-brand-primary/40 text-brand-primary flex items-center justify-center mb-5 text-xl shadow-[0_0_24px_rgba(199,155,29,0.25)]">
               <i class="fa-solid fa-bolt"></i>
             </div>
             <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-primary mb-4">Acesso Antecipado</p>
@@ -527,24 +797,24 @@
           <div class="h-px w-full bg-gradient-to-r from-transparent via-brand-primary/40 to-transparent mb-7"></div>
           <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-500 mb-4 text-center">O que você recebe</p>
           <ul class="space-y-3 text-[0.95rem] text-gray-300 leading-relaxed">
-            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-check text-brand-primary mt-1 shrink-0 text-sm"></i> <span>Congresso online e ao vivo</span></li>
-            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-check text-brand-primary mt-1 shrink-0 text-sm"></i> <span>Certificado digital de 7 horas</span></li>
-            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-check text-brand-primary mt-1 shrink-0 text-sm"></i> <span>7 palestras com especialistas convidados</span></li>
+            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-circle-check text-brand-primary mt-1 shrink-0 text-sm"></i> <span>Congresso online e ao vivo</span></li>
+            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-circle-check text-brand-primary mt-1 shrink-0 text-sm"></i> <span>Certificado digital de 7 horas</span></li>
+            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-circle-check text-brand-primary mt-1 shrink-0 text-sm"></i> <span>7 palestras com especialistas convidados</span></li>
           </ul>
           <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-amber-400 mt-6 mb-3 text-center">+ Bônus exclusivo</p>
           <div class="rounded-xl bg-amber-400/10 border border-amber-400/15 px-3 py-2.5 text-xs text-gray-200 flex items-center gap-2 mb-8">
             <i class="fa-solid fa-gift text-amber-400 shrink-0"></i> eBook digital exclusivo
           </div>
-          <span class="mt-auto relative overflow-hidden inline-flex w-full items-center justify-center gap-2 bg-brand-primary text-white font-black uppercase py-5 px-6 rounded-2xl tracking-[0.12em] text-base whitespace-nowrap animate-glow-pulse group-hover:bg-brand-primaryHover group-hover:shadow-[0_0_0_4px_rgba(253,25,29,0.25)] transition-colors duration-500 ease-out">
+          <span class="mt-auto relative overflow-hidden inline-flex w-full items-center justify-center gap-2 bg-brand-primary text-white font-black uppercase py-5 px-6 rounded-xl tracking-[0.12em] text-base whitespace-nowrap animate-glow-pulse group-hover:bg-brand-primaryHover group-hover:shadow-[0_0_0_4px_rgba(199,155,29,0.25)] transition-colors duration-500 ease-out">
             <span class="absolute inset-0 -translate-x-[120%] skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:translate-x-[120%] transition-transform duration-700 ease-out"></span>
             <span class="relative z-10 inline-flex items-center gap-2">Garantir minha vaga <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i></span>
           </span>
         </button>
 
         <!-- LOTE 2 -->
-        <button type="button" data-aos="fade-up" data-aos-delay="100" data-checkout-url="#" data-plano="Lote 2 - Promocional" class="btn-checkout-trigger group relative flex flex-col text-left w-full cursor-pointer rounded-[28px] border border-brand-primary/70 bg-gradient-to-b from-brand-bg to-[#0d0612] px-8 py-10 md:px-8 md:py-12 shadow-[0_10px_40px_rgba(253,25,29,0.12)] hover:shadow-[0_24px_70px_rgba(253,25,29,0.28)] hover:-translate-y-1.5 transition-all duration-500">
+        <button type="button" data-aos="fade-up" data-aos-delay="100" data-checkout-url="#" data-plano="Lote 2 - Promocional" class="btn-checkout-trigger group relative flex flex-col text-left w-full cursor-pointer rounded-[24px] border border-brand-primary/70 bg-gradient-to-b from-brand-bg to-[#0d0612] px-8 py-10 md:px-8 md:py-12 shadow-[0_10px_40px_rgba(199,155,29,0.12)] hover:shadow-[0_24px_70px_rgba(199,155,29,0.28)] hover:-translate-y-1.5 transition-all duration-500">
           <div class="text-center mb-7 pt-2">
-            <div class="w-14 h-14 mx-auto rounded-full bg-gradient-to-br from-brand-primary/30 to-brand-primary/5 border border-brand-primary/40 text-brand-primary flex items-center justify-center mb-5 text-xl shadow-[0_0_24px_rgba(253,25,29,0.25)]">
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-brand-primary/30 to-brand-primary/5 border border-brand-primary/40 text-brand-primary flex items-center justify-center mb-5 text-xl shadow-[0_0_24px_rgba(199,155,29,0.25)]">
               <i class="fa-solid fa-ticket"></i>
             </div>
             <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-primary mb-4">Lote Promocional</p>
@@ -557,15 +827,15 @@
           <div class="h-px w-full bg-gradient-to-r from-transparent via-brand-primary/40 to-transparent mb-7"></div>
           <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-500 mb-4 text-center">O que você recebe</p>
           <ul class="space-y-3 text-[0.95rem] text-gray-300 leading-relaxed">
-            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-check text-brand-primary mt-1 shrink-0 text-sm"></i> <span>Congresso online e ao vivo</span></li>
-            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-check text-brand-primary mt-1 shrink-0 text-sm"></i> <span>Certificado digital de 7 horas</span></li>
-            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-check text-brand-primary mt-1 shrink-0 text-sm"></i> <span>7 palestras com especialistas convidados</span></li>
+            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-circle-check text-brand-primary mt-1 shrink-0 text-sm"></i> <span>Congresso online e ao vivo</span></li>
+            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-circle-check text-brand-primary mt-1 shrink-0 text-sm"></i> <span>Certificado digital de 7 horas</span></li>
+            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-circle-check text-brand-primary mt-1 shrink-0 text-sm"></i> <span>7 palestras com especialistas convidados</span></li>
           </ul>
           <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-amber-400 mt-6 mb-3 text-center">+ Bônus exclusivo</p>
           <div class="rounded-xl bg-amber-400/10 border border-amber-400/15 px-3 py-2.5 text-xs text-gray-200 flex items-center gap-2 mb-8">
             <i class="fa-solid fa-gift text-amber-400 shrink-0"></i> eBook digital exclusivo
           </div>
-          <span class="mt-auto relative overflow-hidden inline-flex w-full items-center justify-center gap-2 bg-brand-primary text-white font-black uppercase py-5 px-6 rounded-2xl tracking-[0.12em] text-base whitespace-nowrap animate-glow-pulse group-hover:bg-brand-primaryHover group-hover:shadow-[0_0_0_4px_rgba(253,25,29,0.25)] transition-colors duration-500 ease-out">
+          <span class="mt-auto relative overflow-hidden inline-flex w-full items-center justify-center gap-2 bg-brand-primary text-white font-black uppercase py-5 px-6 rounded-xl tracking-[0.12em] text-base whitespace-nowrap animate-glow-pulse group-hover:bg-brand-primaryHover group-hover:shadow-[0_0_0_4px_rgba(199,155,29,0.25)] transition-colors duration-500 ease-out">
             <span class="absolute inset-0 -translate-x-[120%] skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:translate-x-[120%] transition-transform duration-700 ease-out"></span>
             <span class="relative z-10 inline-flex items-center gap-2">Garantir minha vaga <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i></span>
           </span>
@@ -672,7 +942,7 @@
   <!-- CTA FINAL -->
   <section id="cta-final" class="relative has-grid-fx px-6 py-28">
     <div class="container mx-auto max-w-[1300px] text-center glass-strong rounded-3xl p-12 md:p-16" data-aos="zoom-in">
-      <div class="w-14 h-14 mx-auto rounded-full bg-gradient-to-br from-brand-primary/30 to-brand-primary/5 border border-brand-primary/40 text-brand-primary flex items-center justify-center mb-6 text-xl shadow-[0_0_24px_rgba(253,25,29,0.25)]">
+      <div class="w-14 h-14 mx-auto rounded-full bg-gradient-to-br from-brand-primary/30 to-brand-primary/5 border border-brand-primary/40 text-brand-primary flex items-center justify-center mb-6 text-xl shadow-[0_0_24px_rgba(199,155,29,0.25)]">
         <i class="fa-solid fa-calendar-check"></i>
       </div>
       <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brand-primary mb-4">
@@ -795,7 +1065,7 @@
         </div>
         <p class="error-msg text-red-400 text-xs mt-1 hidden">Informe o DDD e o número completo.</p>
       </div>
-      <button type="submit" class="w-full bg-brand-primary text-white font-sans font-bold py-4 rounded-xl uppercase tracking-widest hover:shadow-[0_0_20px_rgba(253,25,29,0.6)] transition btn-submit mt-2">
+      <button type="submit" class="w-full bg-brand-primary text-white font-sans font-bold py-4 rounded-xl uppercase tracking-widest hover:shadow-[0_0_20px_rgba(199,155,29,0.6)] transition btn-submit mt-2">
         Avançar para Pagamento
       </button>
     </form>
