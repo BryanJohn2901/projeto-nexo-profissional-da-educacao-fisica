@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Congresso Brasileiro de Treinamento Feminino | TIMM Eventos</title>
+<meta name="description" content="Edição Comemorativa do Mês do Profissional de Educação Física. 7 especialistas, 7 palestras, 1 único congresso online e ao vivo.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+          title: ['Poppins', 'sans-serif'],
+        },
+        colors: {
+          brand: {
+            bg: '#0B0B14',
+            surface: '#13131F',
+            darkgray: '#0F0F18',
+            primary: '#FD191D',
+            primaryHover: '#D4140F',
+            accent: '#B000FF',
+            success: '#22C55E',
+            whatsapp: '#25D366',
+            whatsappHover: '#1EBE57',
+            textPrimary: '#F5F5F7',
+            textSecondary: '#A1A1AE',
+            gray300: '#C7C7D1',
+            gray500: '#8A8A99',
+            gray600: '#5C5C6B',
+          }
+        },
+        keyframes: {
+          shimmer: {
+            '100%': { transform: 'translateX(100%)' }
+          },
+          floatSlow: {
+            '0%, 100%': { transform: 'translateY(0px)' },
+            '50%': { transform: 'translateY(-20px)' }
+          },
+          glowPulse: {
+            '0%, 100%': { boxShadow: '0 0 0 0 rgba(253,25,29,0.55)', transform: 'scale(1)' },
+            '50%': { boxShadow: '0 0 0 16px rgba(253,25,29,0)', transform: 'scale(1.035)' }
+          },
+          glowPulseGreen: {
+            '0%, 100%': { boxShadow: '0 0 0 0 rgba(37,211,102,0.65)', transform: 'scale(1)' },
+            '50%': { boxShadow: '0 0 0 18px rgba(37,211,102,0)', transform: 'scale(1.035)' }
+          }
+        },
+        animation: {
+          shimmer: 'shimmer 2s infinite',
+          floatSlow: 'floatSlow 10s ease-in-out infinite',
+          'glow-pulse': 'glowPulse 2.8s cubic-bezier(0.4,0,0.6,1) infinite',
+          'glow-pulse-green': 'glowPulseGreen 2.4s cubic-bezier(0.4,0,0.6,1) infinite',
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  html {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  body {
+    background-color: #0B0B14;
+    color: #F5F5F7;
+    cursor: default;
+    width: 100%;
+  }
+  h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+  }
+  .glass {
+    position: relative;
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: border-color 0.5s cubic-bezier(0.16,1,0.3,1), transform 0.5s cubic-bezier(0.16,1,0.3,1), box-shadow 0.5s cubic-bezier(0.16,1,0.3,1);
+  }
+  .glass-strong {
+    position: relative;
+    background: rgba(19,19,31,0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: border-color 0.5s cubic-bezier(0.16,1,0.3,1), transform 0.5s cubic-bezier(0.16,1,0.3,1), box-shadow 0.5s cubic-bezier(0.16,1,0.3,1);
+  }
+  .glass::before, .glass-strong::before, .btn-checkout-trigger::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(420px circle at var(--x, 50%) var(--y, 50%), rgba(253,25,29,0.16), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+  }
+  .glass:hover::before, .glass-strong:hover::before, .btn-checkout-trigger:hover::before {
+    opacity: 1;
+  }
+
+  .has-grid-fx {
+    isolation: isolate;
+  }
+  .has-grid-fx::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+    background-size: 42px 42px;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    -webkit-mask-image: radial-gradient(320px circle at var(--gx, 50%) var(--gy, 50%), black 0%, transparent 75%);
+    mask-image: radial-gradient(320px circle at var(--gx, 50%) var(--gy, 50%), black 0%, transparent 75%);
+  }
+  .has-grid-fx.grid-active::before {
+    opacity: 1;
+  }
+  .blob {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(120px);
+    opacity: 0.35;
+    pointer-events: none;
+  }
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: #0B0B14; }
+  ::-webkit-scrollbar-thumb { background: #FD191D; border-radius: 999px; }
+
+  .popup-form input:invalid.touched {
+    border-color: #ef4444;
+  }
+
+  #lead-modal { transition: opacity 0.25s ease; }
+  #lead-modal.hidden-modal { opacity: 0; pointer-events: none; }
+  #lead-modal .modal-panel { transition: transform 0.25s ease, opacity 0.25s ease; }
+  #lead-modal.hidden-modal .modal-panel { transform: translateY(16px) scale(0.98); opacity: 0; }
+
+  .faq-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s cubic-bezier(0.16,1,0.3,1);
+  }
+  .faq-item.is-open .faq-panel {
+    grid-template-rows: 1fr;
+  }
+  .faq-item.is-open .faq-icon {
+    transform: rotate(180deg);
+  }
+
+  .card-tilt {
+    transform-style: preserve-3d;
+    transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s ease;
+    will-change: transform;
+  }
+  .card-tilt-sheen {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(280px circle at var(--mx, 50%) var(--my, 50%), rgba(255,255,255,0.35), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    mix-blend-mode: overlay;
+  }
+  .card-tilt.is-tilting {
+    transition: box-shadow 0.4s ease;
+  }
+  .card-tilt.is-tilting .card-tilt-sheen {
+    opacity: 1;
+  }
+
+  .nexo-logo-fill {
+    fill: #ffffff;
+    transition: fill 0.5s ease;
+  }
+  .nexo-logo-link:hover .nexo-logo-fill {
+    fill: #d9ff6b;
+  }
+</style>
+</head>
+
+<body class="bg-brand-bg font-sans text-brand-textPrimary antialiased overflow-x-hidden">
+
+<div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+  <div class="blob w-[500px] h-[500px] bg-brand-primary top-[-100px] left-[-150px] animate-floatSlow"></div>
+  <div class="blob w-[600px] h-[600px] bg-brand-accent top-[40%] right-[-200px] animate-floatSlow" style="animation-delay: -3s;"></div>
+  <div class="blob w-[400px] h-[400px] bg-brand-primary bottom-[-100px] left-[10%] animate-floatSlow" style="animation-delay: -6s;"></div>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section id="hero" class="relative isolate overflow-hidden px-6 pt-20 md:pt-28 pb-20 md:pb-28">
+    <div class="absolute inset-0 -z-10">
+      <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=1600&q=80" alt="Treinamento feminino" class="w-full h-full object-cover object-[70%_30%]">
+      <div class="absolute inset-0 bg-gradient-to-r from-brand-bg via-brand-bg/95 to-brand-bg/50"></div>
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(11,11,20,0.7) 0%, rgba(11,11,20,0.5) 55%, rgba(11,11,20,0.5) 78%, rgba(11,11,20,0) 100%);"></div>
+    </div>
+    <div class="container mx-auto max-w-[1300px] text-left">
+
+      <img src="img/logo-color.svg" alt="TIMM Eventos" data-aos="fade-up" class="h-12 md:h-14 w-auto mb-8">
+
+      <div data-aos="fade-up" class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-xs font-bold uppercase tracking-widest text-brand-primary mb-8">
+        <i class="fa-solid fa-star"></i>
+        Edição Comemorativa &bull; Mês do Profissional de Educação Física
+      </div>
+
+      <h1 data-aos="fade-up" data-aos-delay="100" class="font-title text-4xl md:text-6xl font-extrabold leading-tight mb-6 max-w-3xl">
+        O conhecimento que está moldando o
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">futuro do treinamento feminino</span>.
+      </h1>
+
+      <p data-aos="fade-up" data-aos-delay="200" class="text-brand-textSecondary text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
+        Em um único dia, aprenda com 7 especialistas como prescrever com mais segurança, gerar melhores resultados e acompanhar as principais atualizações da área.
+      </p>
+
+      <div data-aos="fade-up" data-aos-delay="300" class="flex flex-wrap items-center justify-start gap-4 mb-10">
+        <div class="glass rounded-full px-5 py-2.5 flex items-center gap-2 text-sm font-semibold">
+          <i class="fa-regular fa-calendar text-brand-primary"></i>
+          27 de setembro &bull; Online e ao vivo
+        </div>
+        <div class="glass rounded-full px-5 py-2.5 flex items-center gap-2 text-sm font-semibold">
+          <i class="fa-solid fa-graduation-cap text-brand-primary"></i>
+          Certificado digital de 7 horas
+        </div>
+      </div>
+
+      <div data-aos="zoom-in" data-aos-delay="400" class="mb-10">
+        <p class="text-brand-gray500 text-sm line-through">De R$97</p>
+        <p class="font-title text-4xl md:text-5xl font-extrabold text-white">Por apenas <span class="text-brand-primary">R$49,90</span></p>
+      </div>
+
+      <button type="button" data-aos="zoom-in" data-aos-delay="500" class="btn-open-modal animate-glow-pulse-green group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-xl bg-brand-whatsapp hover:bg-brand-whatsappHover px-14 py-6 transition-all duration-500 ease-out hover:-translate-y-0.5 hover:scale-[1.03] cursor-pointer border-0">
+        <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer"></div>
+        <span class="relative text-base font-bold uppercase tracking-[0.2em] text-white">
+          Quero garantir minha vaga
+        </span>
+      </button>
+
+    </div>
+  </section>
+
+  <!-- EVENTO / SOBRE -->
+  <section id="evento" class="relative has-grid-fx px-6 py-28">
+    <div class="container mx-auto max-w-[1300px]">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-primary">TIMM Eventos &bull; 13 anos</span>
+          <h2 class="text-3xl md:text-4xl font-black mt-4 mb-6 leading-tight">O Congresso Brasileiro de Treinamento Feminino</h2>
+          <p class="text-brand-textSecondary leading-relaxed mb-4">
+            Em comemoração aos 13 anos da TIMM Eventos e ao Mês do Profissional de Educação Física, reunimos alguns dos principais nomes da área para uma edição especial dedicada ao treinamento feminino.
+          </p>
+          <p class="text-brand-textSecondary leading-relaxed mb-8">
+            Um encontro online, ao vivo e com vagas limitadas para profissionais que desejam acompanhar as discussões que estão movimentando a Educação Física.
+          </p>
+          <button type="button" class="btn-open-modal animate-glow-pulse group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-brand-primary hover:bg-brand-primaryHover px-12 py-5 transition-all duration-500 ease-out hover:-translate-y-0.5 hover:scale-[1.03] cursor-pointer border-0">
+            <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer"></div>
+            <span class="relative text-base font-bold uppercase tracking-[0.2em] text-white">Quero garantir minha vaga</span>
+          </button>
+        </div>
+
+        <div data-aos="fade-left" class="grid grid-cols-2 gap-4">
+          <div class="glass rounded-2xl p-6 text-center hover:-translate-y-1 hover:border-brand-primary/40 transition-all duration-500 ease-out">
+            <div class="w-10 h-10 mx-auto rounded-full bg-brand-primary/10 border border-brand-primary/30 text-brand-primary flex items-center justify-center mb-3">
+              <i class="fa-solid fa-sack-dollar text-sm"></i>
+            </div>
+            <p class="text-3xl font-black text-brand-primary mb-1">R$49,90</p>
+            <p class="text-xs uppercase tracking-widest text-brand-gray500">Investimento</p>
+          </div>
+          <div class="glass rounded-2xl p-6 text-center hover:-translate-y-1 hover:border-brand-primary/40 transition-all duration-500 ease-out">
+            <div class="w-10 h-10 mx-auto rounded-full bg-brand-primary/10 border border-brand-primary/30 text-brand-primary flex items-center justify-center mb-3">
+              <i class="fa-regular fa-clock text-sm"></i>
+            </div>
+            <p class="text-3xl font-black text-brand-primary mb-1">7 horas</p>
+            <p class="text-xs uppercase tracking-widest text-brand-gray500">Carga horária</p>
+          </div>
+          <div class="glass rounded-2xl p-6 text-center hover:-translate-y-1 hover:border-brand-primary/40 transition-all duration-500 ease-out">
+            <div class="w-10 h-10 mx-auto rounded-full bg-brand-primary/10 border border-brand-primary/30 text-brand-primary flex items-center justify-center mb-3">
+              <i class="fa-solid fa-microphone-lines text-sm"></i>
+            </div>
+            <p class="text-3xl font-black text-brand-primary mb-1">7</p>
+            <p class="text-xs uppercase tracking-widest text-brand-gray500">Palestras</p>
+          </div>
+          <div class="glass rounded-2xl p-6 text-center hover:-translate-y-1 hover:border-brand-primary/40 transition-all duration-500 ease-out">
+            <div class="w-10 h-10 mx-auto rounded-full bg-brand-primary/10 border border-brand-primary/30 text-brand-primary flex items-center justify-center mb-3">
+              <i class="fa-solid fa-trophy text-sm"></i>
+            </div>
+            <p class="text-3xl font-black text-brand-primary mb-1">1</p>
+            <p class="text-xs uppercase tracking-widest text-brand-gray500">Único congresso</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PALESTRANTES -->
+  <section id="palestrantes" class="relative has-grid-fx px-6 py-28">
+    <div class="container mx-auto max-w-[1300px]">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-primary">Palestrantes</span>
+        <h2 class="text-3xl md:text-4xl font-black mt-4">7 especialistas em um único dia</h2>
+      </div>
+
+      <div class="flex flex-col">
+
+        <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 py-10 border-b border-white/5">
+          <div class="w-full md:w-2/5 shrink-0">
+            <div class="card-tilt relative rounded-3xl overflow-hidden aspect-[4/5] glass">
+              <div class="card-tilt-sheen"></div>
+              <span class="absolute top-4 left-4 z-10 text-6xl font-black text-white/10">01</span>
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=1000&h=1250&fit=crop&q=80" alt="Carlos Garon" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+            </div>
+          </div>
+          <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="100" class="w-full md:w-3/5">
+            <div class="h-1 w-10 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent mb-4"></div>
+            <h3 class="text-2xl md:text-3xl font-black text-white mb-3">Carlos Garon</h3>
+            <p class="text-brand-textSecondary leading-relaxed mb-5">Treinamento Feminino: estratégias para maximizar a resposta no treino de quadríceps. Você vai sair com ajustes práticos de execução, volume e progressão de carga para aplicar já na próxima sessão com suas alunas.</p>
+            <a href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-bold text-brand-primary hover:text-white transition-colors duration-500">
+              <i class="fa-brands fa-instagram text-lg"></i> @carlos.garon
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 py-10 border-b border-white/5">
+          <div class="w-full md:w-2/5 shrink-0">
+            <div class="card-tilt relative rounded-3xl overflow-hidden aspect-[4/5] glass">
+              <div class="card-tilt-sheen"></div>
+              <span class="absolute top-4 left-4 z-10 text-6xl font-black text-white/10">02</span>
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=1000&h=1250&fit=crop&q=80" alt="Antonio Arruda" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+            </div>
+          </div>
+          <div data-aos="fade-right" data-aos-duration="900" data-aos-delay="100" class="w-full md:w-3/5">
+            <div class="h-1 w-10 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent mb-4"></div>
+            <h3 class="text-2xl md:text-3xl font-black text-white mb-3">Antonio Arruda</h3>
+            <p class="text-brand-textSecondary leading-relaxed mb-5">Lipedema: como o exercício pode auxiliar no tratamento. A palestra traz protocolos seguros de treino e cuidados específicos para prescrever com confiança para alunas com esse quadro.</p>
+            <a href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-bold text-brand-primary hover:text-white transition-colors duration-500">
+              <i class="fa-brands fa-instagram text-lg"></i> @antonio.arruda
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 py-10 border-b border-white/5">
+          <div class="w-full md:w-2/5 shrink-0">
+            <div class="card-tilt relative rounded-3xl overflow-hidden aspect-[4/5] glass">
+              <div class="card-tilt-sheen"></div>
+              <span class="absolute top-4 left-4 z-10 text-6xl font-black text-white/10">03</span>
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=1000&h=1250&fit=crop&q=80" alt="Santiago Paes" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+            </div>
+          </div>
+          <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="100" class="w-full md:w-3/5">
+            <div class="h-1 w-10 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent mb-4"></div>
+            <h3 class="text-2xl md:text-3xl font-black text-white mb-3">Santiago Paes</h3>
+            <p class="text-brand-textSecondary leading-relaxed mb-5">Periodização para usuários de canetas emagrecedoras. Entenda como ajustar volume, intensidade e recuperação para preservar massa magra durante o uso dessas medicações.</p>
+            <a href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-bold text-brand-primary hover:text-white transition-colors duration-500">
+              <i class="fa-brands fa-instagram text-lg"></i> @santiago.paes
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 py-10 border-b border-white/5">
+          <div class="w-full md:w-2/5 shrink-0">
+            <div class="card-tilt relative rounded-3xl overflow-hidden aspect-[4/5] glass">
+              <div class="card-tilt-sheen"></div>
+              <span class="absolute top-4 left-4 z-10 text-6xl font-black text-white/10">04</span>
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1000&h=1250&fit=crop&q=80" alt="Luciana Pimenta" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+            </div>
+          </div>
+          <div data-aos="fade-right" data-aos-duration="900" data-aos-delay="100" class="w-full md:w-3/5">
+            <div class="h-1 w-10 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent mb-4"></div>
+            <h3 class="text-2xl md:text-3xl font-black text-white mb-3">Luciana Pimenta</h3>
+            <p class="text-brand-textSecondary leading-relaxed mb-5">Treinamento para mulheres 40+. Estratégias de periodização, preservação óssea e articular pensadas para essa fase, unindo segurança e resultado estético.</p>
+            <a href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-bold text-brand-primary hover:text-white transition-colors duration-500">
+              <i class="fa-brands fa-instagram text-lg"></i> @luciana.pimenta
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 py-10 border-b border-white/5">
+          <div class="w-full md:w-2/5 shrink-0">
+            <div class="card-tilt relative rounded-3xl overflow-hidden aspect-[4/5] glass">
+              <div class="card-tilt-sheen"></div>
+              <span class="absolute top-4 left-4 z-10 text-6xl font-black text-white/10">05</span>
+              <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=1000&h=1250&fit=crop&q=80" alt="Fábio Chiodini" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+            </div>
+          </div>
+          <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="100" class="w-full md:w-3/5">
+            <div class="h-1 w-10 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent mb-4"></div>
+            <h3 class="text-2xl md:text-3xl font-black text-white mb-3">Fábio Chiodini</h3>
+            <p class="text-brand-textSecondary leading-relaxed mb-5">Glúteos 360º: testes, ajustes posturais e estratégias para potencializar resultados. Uma imersão prática em avaliação, correção de compensações e progressão de exercícios para esse grupo muscular.</p>
+            <a href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-bold text-brand-primary hover:text-white transition-colors duration-500">
+              <i class="fa-brands fa-instagram text-lg"></i> @fabio.chiodini
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 py-10 border-b border-white/5">
+          <div class="w-full md:w-2/5 shrink-0">
+            <div class="card-tilt relative rounded-3xl overflow-hidden aspect-[4/5] glass">
+              <div class="card-tilt-sheen"></div>
+              <span class="absolute top-4 left-4 z-10 text-6xl font-black text-white/10">06</span>
+              <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?w=1000&h=1250&fit=crop&q=80" alt="Bruno Breno" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+            </div>
+          </div>
+          <div data-aos="fade-right" data-aos-duration="900" data-aos-delay="100" class="w-full md:w-3/5">
+            <div class="h-1 w-10 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent mb-4"></div>
+            <h3 class="text-2xl md:text-3xl font-black text-white mb-3">Bruno Breno</h3>
+            <p class="text-brand-textSecondary leading-relaxed mb-5">Exercício físico no pós-cirurgia bariátrica. Critérios de prescrição por fase pós-operatória, sinais de alerta e adaptações necessárias para treinar essas alunas com segurança.</p>
+            <a href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-bold text-brand-primary hover:text-white transition-colors duration-500">
+              <i class="fa-brands fa-instagram text-lg"></i> @bruno.breno
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 py-10">
+          <div class="w-full md:w-2/5 shrink-0">
+            <div class="card-tilt relative rounded-3xl overflow-hidden aspect-[4/5] glass">
+              <div class="card-tilt-sheen"></div>
+              <span class="absolute top-4 left-4 z-10 text-6xl font-black text-white/10">07</span>
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=1000&h=1250&fit=crop&q=80" alt="Henrique Battista" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+            </div>
+          </div>
+          <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="100" class="w-full md:w-3/5">
+            <div class="h-1 w-10 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent mb-4"></div>
+            <h3 class="text-2xl md:text-3xl font-black text-white mb-3">Henrique Battista</h3>
+            <p class="text-brand-textSecondary leading-relaxed mb-5">Como aumentar o valor da hora-aula sem perder alunos. Um panorama de posicionamento, comunicação de valor e estratégias comerciais para o personal trainer que atua com o público feminino.</p>
+            <a href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-bold text-brand-primary hover:text-white transition-colors duration-500">
+              <i class="fa-brands fa-instagram text-lg"></i> @henrique.battista
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-12" data-aos="fade-up">
+        <button type="button" class="btn-open-modal animate-glow-pulse group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-brand-primary hover:bg-brand-primaryHover px-12 py-5 transition-all duration-500 ease-out hover:-translate-y-0.5 hover:scale-[1.03] cursor-pointer border-0">
+          <span class="relative text-base font-bold uppercase tracking-[0.2em] text-white">Quero participar</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- REALIZAÇÃO -->
+  <section id="realizacao" class="relative has-grid-fx px-6 py-28">
+    <div class="container mx-auto max-w-[1300px]">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-primary">Realização</span>
+        <h2 class="text-3xl md:text-4xl font-black mt-4 mb-6">Há 13 anos conectando profissionais aos grandes nomes da Educação Física</h2>
+        <p class="text-brand-textSecondary max-w-2xl mx-auto leading-relaxed mb-6">
+          Ao longo de sua trajetória, a TIMM Eventos promoveu encontros que contribuíram para a atualização de milhares de profissionais. Nesta edição especial, o Congresso Brasileiro de Treinamento Feminino reúne especialistas para discutir os temas que hoje fazem parte da rotina de quem atua com o público feminino.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-3">
+          <span class="glass rounded-full px-4 py-2 flex items-center gap-2 text-xs font-semibold">
+            <i class="fa-solid fa-calendar-days text-brand-primary"></i> 13 anos de trajetória
+          </span>
+          <span class="glass rounded-full px-4 py-2 flex items-center gap-2 text-xs font-semibold">
+            <i class="fa-solid fa-users text-brand-primary"></i> Milhares de profissionais impactados
+          </span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 md:auto-rows-[220px] gap-4">
+        <div data-aos="zoom-in" data-aos-delay="0" class="card-tilt group aspect-square md:aspect-auto md:col-span-2 md:row-span-2 rounded-2xl glass overflow-hidden">
+          <div class="card-tilt-sheen"></div>
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=800&fit=crop&q=80" alt="Treinamento feminino em academia" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-500">
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="100" class="card-tilt group aspect-square md:aspect-auto md:col-start-3 md:row-start-1 rounded-2xl glass overflow-hidden">
+          <div class="card-tilt-sheen"></div>
+          <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&h=600&fit=crop&q=80" alt="Aula em grupo de treinamento feminino" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-500">
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="200" class="card-tilt group aspect-square md:aspect-auto md:col-start-4 md:row-start-1 rounded-2xl glass overflow-hidden">
+          <div class="card-tilt-sheen"></div>
+          <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&h=600&fit=crop&q=80" alt="Palestra em congresso profissional" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-500">
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="300" class="card-tilt group aspect-square md:aspect-auto md:col-start-3 md:col-span-2 md:row-start-2 rounded-2xl glass overflow-hidden">
+          <div class="card-tilt-sheen"></div>
+          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=400&fit=crop&q=80" alt="Auditório de evento e congresso" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-500">
+        </div>
+      </div>
+
+      <div class="text-center mt-12" data-aos="fade-up">
+        <button type="button" class="btn-open-modal animate-glow-pulse group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-brand-primary hover:bg-brand-primaryHover px-12 py-5 transition-all duration-500 ease-out hover:-translate-y-0.5 hover:scale-[1.03] cursor-pointer border-0">
+          <span class="relative text-base font-bold uppercase tracking-[0.2em] text-white">Quero garantir minha vaga</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOTES / PRICING -->
+  <section id="lotes" class="relative has-grid-fx px-6 py-28">
+    <div class="container mx-auto max-w-[1300px]">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-primary">Inscrições</span>
+        <h2 class="text-3xl md:text-4xl font-black mt-4">Escolha seu lote</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 items-stretch max-w-3xl mx-auto">
+
+        <!-- LOTE 1 -->
+        <button type="button" data-aos="fade-up" data-aos-delay="0" data-checkout-url="#" data-plano="Lote 1 - Acesso Antecipado" class="btn-checkout-trigger group relative flex flex-col text-left w-full cursor-pointer rounded-[28px] border border-brand-primary/70 bg-gradient-to-b from-brand-bg to-[#0d0612] px-8 py-10 md:px-8 md:py-12 shadow-[0_10px_40px_rgba(253,25,29,0.12)] hover:shadow-[0_24px_70px_rgba(253,25,29,0.28)] hover:-translate-y-1.5 transition-all duration-500">
+          <span class="absolute -top-4 left-1/2 -translate-x-1/2 z-20 whitespace-nowrap rounded-full bg-brand-primary px-5 py-1.5 text-[10px] font-black uppercase tracking-[0.16em] text-white shadow-[0_8px_24px_rgba(253,25,29,0.45)]">Mais escolhido</span>
+          <div class="text-center mb-7 pt-2">
+            <div class="w-14 h-14 mx-auto rounded-full bg-gradient-to-br from-brand-primary/30 to-brand-primary/5 border border-brand-primary/40 text-brand-primary flex items-center justify-center mb-5 text-xl shadow-[0_0_24px_rgba(253,25,29,0.25)]">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-primary mb-4">Acesso Antecipado</p>
+            <p class="text-gray-500 line-through text-sm mb-1">De R$&nbsp;97,00</p>
+            <p class="font-black text-4xl md:text-[2.75rem] text-white leading-none tracking-tight">Por <span class="text-brand-primary">R$&nbsp;49,90</span></p>
+            <p class="mt-3 inline-flex items-center gap-1.5 text-emerald-400 text-xs font-bold uppercase tracking-wide">
+              <i class="fa-solid fa-arrow-trend-down"></i> Economia de 48% no valor cheio
+            </p>
+          </div>
+          <div class="h-px w-full bg-gradient-to-r from-transparent via-brand-primary/40 to-transparent mb-7"></div>
+          <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-500 mb-4 text-center">O que você recebe</p>
+          <ul class="space-y-3 text-[0.95rem] text-gray-300 leading-relaxed">
+            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-check text-brand-primary mt-1 shrink-0 text-sm"></i> <span>Congresso online e ao vivo</span></li>
+            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-check text-brand-primary mt-1 shrink-0 text-sm"></i> <span>Certificado digital de 7 horas</span></li>
+            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-check text-brand-primary mt-1 shrink-0 text-sm"></i> <span>7 palestras com especialistas convidados</span></li>
+          </ul>
+          <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-amber-400 mt-6 mb-3 text-center">+ Bônus exclusivo</p>
+          <div class="rounded-xl bg-amber-400/10 border border-amber-400/15 px-3 py-2.5 text-xs text-gray-200 flex items-center gap-2 mb-8">
+            <i class="fa-solid fa-gift text-amber-400 shrink-0"></i> eBook digital exclusivo
+          </div>
+          <span class="mt-auto relative overflow-hidden inline-flex w-full items-center justify-center gap-2 bg-brand-primary text-white font-black uppercase py-5 px-6 rounded-2xl tracking-[0.12em] text-base whitespace-nowrap animate-glow-pulse group-hover:bg-brand-primaryHover group-hover:shadow-[0_0_0_4px_rgba(253,25,29,0.25)] transition-colors duration-500 ease-out">
+            <span class="absolute inset-0 -translate-x-[120%] skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:translate-x-[120%] transition-transform duration-700 ease-out"></span>
+            <span class="relative z-10 inline-flex items-center gap-2">Garantir minha vaga <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i></span>
+          </span>
+        </button>
+
+        <!-- LOTE 2 -->
+        <button type="button" data-aos="fade-up" data-aos-delay="100" data-checkout-url="#" data-plano="Lote 2 - Promocional" class="btn-checkout-trigger group relative flex flex-col text-left w-full cursor-pointer rounded-[28px] border border-brand-primary/70 bg-gradient-to-b from-brand-bg to-[#0d0612] px-8 py-10 md:px-8 md:py-12 shadow-[0_10px_40px_rgba(253,25,29,0.12)] hover:shadow-[0_24px_70px_rgba(253,25,29,0.28)] hover:-translate-y-1.5 transition-all duration-500">
+          <div class="text-center mb-7 pt-2">
+            <div class="w-14 h-14 mx-auto rounded-full bg-gradient-to-br from-brand-primary/30 to-brand-primary/5 border border-brand-primary/40 text-brand-primary flex items-center justify-center mb-5 text-xl shadow-[0_0_24px_rgba(253,25,29,0.25)]">
+              <i class="fa-solid fa-ticket"></i>
+            </div>
+            <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-primary mb-4">Lote Promocional</p>
+            <p class="text-gray-500 line-through text-sm mb-1">De R$&nbsp;127,00</p>
+            <p class="font-black text-4xl md:text-[2.75rem] text-white leading-none tracking-tight">Por <span class="text-brand-primary">R$&nbsp;69,90</span></p>
+            <p class="mt-3 inline-flex items-center gap-1.5 text-emerald-400 text-xs font-bold uppercase tracking-wide">
+              <i class="fa-solid fa-arrow-trend-down"></i> Economia de 45% no valor cheio
+            </p>
+          </div>
+          <div class="h-px w-full bg-gradient-to-r from-transparent via-brand-primary/40 to-transparent mb-7"></div>
+          <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-500 mb-4 text-center">O que você recebe</p>
+          <ul class="space-y-3 text-[0.95rem] text-gray-300 leading-relaxed">
+            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-check text-brand-primary mt-1 shrink-0 text-sm"></i> <span>Congresso online e ao vivo</span></li>
+            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-check text-brand-primary mt-1 shrink-0 text-sm"></i> <span>Certificado digital de 7 horas</span></li>
+            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-check text-brand-primary mt-1 shrink-0 text-sm"></i> <span>7 palestras com especialistas convidados</span></li>
+          </ul>
+          <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-amber-400 mt-6 mb-3 text-center">+ Bônus exclusivo</p>
+          <div class="rounded-xl bg-amber-400/10 border border-amber-400/15 px-3 py-2.5 text-xs text-gray-200 flex items-center gap-2 mb-8">
+            <i class="fa-solid fa-gift text-amber-400 shrink-0"></i> eBook digital exclusivo
+          </div>
+          <span class="mt-auto relative overflow-hidden inline-flex w-full items-center justify-center gap-2 bg-brand-primary text-white font-black uppercase py-5 px-6 rounded-2xl tracking-[0.12em] text-base whitespace-nowrap animate-glow-pulse group-hover:bg-brand-primaryHover group-hover:shadow-[0_0_0_4px_rgba(253,25,29,0.25)] transition-colors duration-500 ease-out">
+            <span class="absolute inset-0 -translate-x-[120%] skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:translate-x-[120%] transition-transform duration-700 ease-out"></span>
+            <span class="relative z-10 inline-flex items-center gap-2">Garantir minha vaga <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i></span>
+          </span>
+        </button>
+
+      </div>
+      <p class="text-center text-brand-gray600 text-xs mt-8">Checkout Eduzz &mdash; URLs de pagamento a configurar (data-checkout-url).</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="relative has-grid-fx px-6 py-28">
+    <div class="container mx-auto max-w-[1300px]">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-primary">FAQ</span>
+        <h2 class="text-3xl md:text-4xl font-black mt-4">Perguntas frequentes</h2>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-4">
+        <div data-aos="fade-up" class="faq-item glass rounded-2xl overflow-hidden hover:border-brand-primary/40 transition-colors duration-500">
+          <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 p-6 text-left cursor-pointer">
+            <span class="flex items-center gap-4">
+              <span class="shrink-0 w-8 h-8 rounded-full bg-brand-primary/10 border border-brand-primary/30 text-brand-primary flex items-center justify-center text-xs font-black">01</span>
+              <span class="font-bold text-white">Quando acontece?</span>
+            </span>
+            <i class="faq-icon fa-solid fa-chevron-down text-brand-primary transition-transform duration-500 shrink-0"></i>
+          </button>
+          <div class="faq-panel">
+            <div class="overflow-hidden">
+              <p class="text-brand-textSecondary px-6 pb-6 pl-[4.5rem] leading-relaxed">27 de setembro.</p>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="faq-item glass rounded-2xl overflow-hidden hover:border-brand-primary/40 transition-colors duration-500">
+          <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 p-6 text-left cursor-pointer">
+            <span class="flex items-center gap-4">
+              <span class="shrink-0 w-8 h-8 rounded-full bg-brand-primary/10 border border-brand-primary/30 text-brand-primary flex items-center justify-center text-xs font-black">02</span>
+              <span class="font-bold text-white">O evento será presencial?</span>
+            </span>
+            <i class="faq-icon fa-solid fa-chevron-down text-brand-primary transition-transform duration-500 shrink-0"></i>
+          </button>
+          <div class="faq-panel">
+            <div class="overflow-hidden">
+              <p class="text-brand-textSecondary px-6 pb-6 pl-[4.5rem] leading-relaxed">Não. O congresso será totalmente online e ao vivo.</p>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="faq-item glass rounded-2xl overflow-hidden hover:border-brand-primary/40 transition-colors duration-500">
+          <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 p-6 text-left cursor-pointer">
+            <span class="flex items-center gap-4">
+              <span class="shrink-0 w-8 h-8 rounded-full bg-brand-primary/10 border border-brand-primary/30 text-brand-primary flex items-center justify-center text-xs font-black">03</span>
+              <span class="font-bold text-white">Estudante pode participar?</span>
+            </span>
+            <i class="faq-icon fa-solid fa-chevron-down text-brand-primary transition-transform duration-500 shrink-0"></i>
+          </button>
+          <div class="faq-panel">
+            <div class="overflow-hidden">
+              <p class="text-brand-textSecondary px-6 pb-6 pl-[4.5rem] leading-relaxed">Sim e recebe certificado digital de 7 horas.</p>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="faq-item glass rounded-2xl overflow-hidden hover:border-brand-primary/40 transition-colors duration-500">
+          <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 p-6 text-left cursor-pointer">
+            <span class="flex items-center gap-4">
+              <span class="shrink-0 w-8 h-8 rounded-full bg-brand-primary/10 border border-brand-primary/30 text-brand-primary flex items-center justify-center text-xs font-black">04</span>
+              <span class="font-bold text-white">Recebo certificado?</span>
+            </span>
+            <i class="faq-icon fa-solid fa-chevron-down text-brand-primary transition-transform duration-500 shrink-0"></i>
+          </button>
+          <div class="faq-panel">
+            <div class="overflow-hidden">
+              <p class="text-brand-textSecondary px-6 pb-6 pl-[4.5rem] leading-relaxed">Sim. Certificado digital de 7 horas.</p>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="faq-item glass rounded-2xl overflow-hidden hover:border-brand-primary/40 transition-colors duration-500">
+          <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 p-6 text-left cursor-pointer">
+            <span class="flex items-center gap-4">
+              <span class="shrink-0 w-8 h-8 rounded-full bg-brand-primary/10 border border-brand-primary/30 text-brand-primary flex items-center justify-center text-xs font-black">05</span>
+              <span class="font-bold text-white">As gravações estão inclusas?</span>
+            </span>
+            <i class="faq-icon fa-solid fa-chevron-down text-brand-primary transition-transform duration-500 shrink-0"></i>
+          </button>
+          <div class="faq-panel">
+            <div class="overflow-hidden">
+              <p class="text-brand-textSecondary px-6 pb-6 pl-[4.5rem] leading-relaxed">Não. Elas podem ser adicionadas no checkout.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12" data-aos="fade-up">
+        <button type="button" class="btn-open-modal animate-glow-pulse group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-brand-primary hover:bg-brand-primaryHover px-12 py-5 transition-all duration-500 ease-out hover:-translate-y-0.5 hover:scale-[1.03] cursor-pointer border-0">
+          <span class="relative text-base font-bold uppercase tracking-[0.2em] text-white">Ainda com dúvida? Garantir minha vaga</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="cta-final" class="relative has-grid-fx px-6 py-28">
+    <div class="container mx-auto max-w-[1300px] text-center glass-strong rounded-3xl p-12 md:p-16" data-aos="zoom-in">
+      <div class="w-14 h-14 mx-auto rounded-full bg-gradient-to-br from-brand-primary/30 to-brand-primary/5 border border-brand-primary/40 text-brand-primary flex items-center justify-center mb-6 text-xl shadow-[0_0_24px_rgba(253,25,29,0.25)]">
+        <i class="fa-solid fa-calendar-check"></i>
+      </div>
+      <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brand-primary mb-4">
+        <i class="fa-solid fa-bolt"></i> Não fique de fora
+      </span>
+      <h2 class="text-3xl md:text-4xl font-black mb-6 leading-tight">Reserve um domingo para atualizar sua prática profissional.</h2>
+      <p class="text-brand-textSecondary max-w-xl mx-auto mb-8 leading-relaxed">
+        O treinamento feminino evolui rapidamente. Este congresso reúne especialistas que acompanham essa evolução diariamente e compartilham estratégias para diferentes perfis de alunas.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-10 text-sm font-semibold">
+        <span class="glass rounded-full px-5 py-2.5 flex items-center gap-2"><i class="fa-regular fa-calendar text-brand-primary"></i> 27 de setembro</span>
+        <span class="glass rounded-full px-5 py-2.5 flex items-center gap-2"><i class="fa-solid fa-signal text-brand-primary"></i> Online e ao vivo</span>
+        <span class="glass rounded-full px-5 py-2.5 flex items-center gap-2"><i class="fa-solid fa-tag text-brand-primary"></i> Primeiro lote por R$49,90</span>
+      </div>
+      <button type="button" class="btn-open-modal animate-glow-pulse group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-brand-primary hover:bg-brand-primaryHover px-14 py-6 transition-all duration-500 ease-out hover:-translate-y-0.5 hover:scale-[1.03] cursor-pointer border-0">
+        <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer"></div>
+        <span class="relative text-base font-bold uppercase tracking-[0.2em] text-white">Quero garantir minha vaga</span>
+      </button>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-brand-darkgray border-t border-white/5 pt-16 pb-10 relative has-grid-fx z-20">
+  <div class="container mx-auto max-w-[1300px] px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-12">
+      <div class="lg:col-span-4 space-y-4">
+        <a href="#" class="inline-flex items-center hover:opacity-80 transition-opacity duration-500 mb-4">
+          <img src="img/logo-white.svg" alt="TIMM Eventos" class="h-9 w-auto">
+        </a>
+        <p class="text-brand-gray500 text-sm leading-relaxed max-w-sm">Há 13 anos conectando profissionais da Educação Física aos grandes nomes da área.</p>
+      </div>
+      <div class="lg:col-span-2 lg:col-start-7">
+        <h4 class="text-brand-gray300 font-bold uppercase tracking-widest text-xs mb-6">Navegação</h4>
+        <ul class="space-y-3 text-sm text-brand-gray500">
+          <li><a href="#evento" class="hover:text-brand-primary transition-colors duration-200">O Congresso</a></li>
+          <li><a href="#palestrantes" class="hover:text-brand-primary transition-colors duration-200">Palestrantes</a></li>
+          <li><a href="#lotes" class="hover:text-brand-primary transition-colors duration-200">Inscrições</a></li>
+          <li><a href="#faq" class="hover:text-brand-primary transition-colors duration-200">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-2">
+        <h4 class="text-brand-gray300 font-bold uppercase tracking-widest text-xs mb-6">Legal</h4>
+        <ul class="space-y-3 text-sm text-brand-gray500">
+          <li><a href="#" class="hover:text-brand-primary transition-colors duration-200">Termos de Uso</a></li>
+          <li><a href="#" class="hover:text-brand-primary transition-colors duration-200">Política de Privacidade</a></li>
+          <li><a href="#" class="hover:text-brand-primary transition-colors duration-200">Aviso Legal</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-2">
+        <h4 class="text-brand-gray300 font-bold uppercase tracking-widest text-xs mb-6">Suporte</h4>
+        <ul class="space-y-3 text-sm text-brand-gray500">
+          <li><a href="#" class="hover:text-brand-success flex items-center gap-2 transition-colors"><i class="fab fa-whatsapp"></i> WhatsApp Suporte</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">contato@timmeventos.com.br</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-brand-gray600 text-xs">&copy; 2026 TIMM Eventos. Todos os direitos reservados.</p>
+      <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brand-gray500">
+        <span class="w-2 h-2 rounded-full bg-brand-success animate-pulse"></span> Ambiente 100% Seguro
+      </div>
+    </div>
+    <div class="border-t border-white/5 pt-6 mt-6 flex items-center justify-center gap-2">
+      <span class="text-brand-gray600 text-xs">Desenvolvido por</span>
+      <a href="https://www.studionexodigital.com.br/" target="_blank" rel="noopener" aria-label="Studio Nexo Digital" class="nexo-logo-link inline-flex items-center h-4 w-auto transition-transform duration-500 ease-out hover:scale-125">
+        <svg viewBox="0 0 546.56 210.5" class="h-4 w-auto">
+          <g>
+            <g>
+              <path class="nexo-logo-fill" d="M78.98,104.6c-7.63-7.59-14.42-14.03-22.48-20.23-18.13-13.95-39.66-17.41-56.13-.08,28.81,18.35,44.85,49.71,40.48,83.49l-40.84.28V.02s47.98,47.97,47.98,47.97c11.55,11.55,22.32,22.66,34.51,33.45,9.76,7.99,21.28,13.34,34.02,13.73,10.2-.33,18.55-5.2,26.97-10.66l.08,84.39-64.59-64.3Z"/>
+              <path class="nexo-logo-fill" d="M100.33.39l31.31-.16,12.02-.23.03,84.05c-15.53-9.3-27.23-22.58-35.26-38.27-6.41-14.84-9.25-29.82-8.1-45.4Z"/>
+            </g>
+            <g>
+              <path class="nexo-logo-fill" d="M440.73,210.18v-1.72h2.24v-12.58h-2.24v-1.72h6.24c2.1,0,3.73.53,4.88,1.6s1.73,2.71,1.73,4.92v2.97c0,2.23-.58,3.87-1.73,4.93-1.15,1.06-2.78,1.59-4.88,1.59h-6.24ZM444.89,208.44h2.08c1.55,0,2.73-.38,3.52-1.14.79-.76,1.19-1.94,1.19-3.55v-3.13c0-1.63-.4-2.82-1.19-3.57-.79-.75-1.97-1.12-3.52-1.12h-2.08v12.51Z"/>
+              <path class="nexo-logo-fill" d="M461.22,210.18v-16.01h1.92v16.01h-1.92Z"/>
+              <path class="nexo-logo-fill" d="M476.96,210.5c-1.19,0-2.24-.25-3.15-.74-.91-.5-1.62-1.22-2.13-2.18-.51-.96-.77-2.15-.77-3.57v-3.66c0-2.12.56-3.73,1.69-4.84,1.13-1.11,2.65-1.66,4.55-1.66s3.33.52,4.32,1.56c.99,1.04,1.49,2.42,1.49,4.16v.11h-1.9v-.16c0-.76-.14-1.44-.41-2.04s-.7-1.06-1.28-1.41c-.58-.34-1.32-.51-2.22-.51-1.36,0-2.42.42-3.18,1.25-.76.83-1.14,1.99-1.14,3.49v3.75c0,1.49.38,2.66,1.14,3.49s1.83,1.25,3.2,1.25,2.33-.38,2.96-1.14c.63-.76.95-1.78.95-3.04v-.39h-4.85v-1.65h6.72v7.62h-1.74v-1.74h-.32c-.17.34-.4.66-.71.98-.31.32-.72.58-1.24.78-.52.2-1.19.3-2.01.3Z"/>
+              <path class="nexo-logo-fill" d="M491.05,210.18v-16.01h1.92v16.01h-1.92Z"/>
+              <path class="nexo-logo-fill" d="M505.14,210.18v-14.27h-5.15v-1.74h12.21v1.74h-5.15v14.27h-1.92Z"/>
+              <path class="nexo-logo-fill" d="M516.25,210.18l4.94-16.01h3.38l4.94,16.01h-1.99l-1.24-4.05h-6.82l-1.24,4.05h-1.99ZM519.96,204.39h5.83l-2.75-9.06h-.32l-2.77,9.06Z"/>
+              <path class="nexo-logo-fill" d="M536.5,210.18v-16.01h1.92v14.27h8.1v1.74h-10.02Z"/>
+            </g>
+            <g>
+              <path class="nexo-logo-fill" d="M190.36,113.62v4.56c0,14.45,11.41,31.94,33.46,31.94,16.23,0,32.2-7.1,32.2-21.04h25.86c0,23.07-24.08,44.62-54.51,44.62h-7.35c-35.24,0-55.78-29.41-55.78-55.52v-23.32c0-26.11,22.06-56.03,57.3-56.03h4.31c15.21,0,29.66,6.08,40.06,15.97,17.49,16.73,17.24,32.7,17.24,55.27v3.55h-92.79ZM257.8,91.82c0-17.75-15.21-29.16-32.2-29.16-20.54,0-33.47,15.46-34.99,29.16h67.18Z"/>
+              <path class="nexo-logo-fill" d="M324.73,41.37l29.41,44.62,27.13-44.62h29.66l-43.1,65.41,42.85,64.9h-29.66l-29.41-44.62-26.37,44.62h-29.66l42.59-64.9-43.1-65.41h29.66Z"/>
+              <path class="nexo-logo-fill" d="M478.36,173.71c-35.24,0-55.78-29.41-55.78-55.52v-23.32c0-26.11,22.06-56.03,57.3-56.03h9.38c35.24,0,57.3,29.92,57.3,56.03v23.32c0,26.11-20.54,55.52-55.78,55.52h-12.42ZM448.7,118.19c0,21.04,17.75,31.94,35.75,31.94s36-10.9,36-31.94v-23.32c0-21.55-18-32.2-36-32.2-19.27,0-35.75,11.92-35.75,32.2v23.32Z"/>
+            </g>
+          </g>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL DE CAPTURA -->
+<div id="lead-modal" class="hidden-modal fixed inset-0 z-[100] flex items-center justify-center px-4">
+  <div class="absolute inset-0 bg-black/80 backdrop-blur-sm modal-backdrop"></div>
+  <div class="modal-panel relative w-full max-w-md glass-strong rounded-2xl p-8">
+    <button type="button" class="btn-close-modal absolute top-4 right-4 text-brand-gray500 hover:text-white transition-colors">
+      <i class="fa-solid fa-xmark text-xl"></i>
+    </button>
+
+    <h3 class="text-2xl font-black text-white mb-1">Garanta sua vaga</h3>
+    <p id="modal-subtitle" class="text-brand-textSecondary text-sm mb-6">Congresso Brasileiro de Treinamento Feminino &bull; 27 de setembro</p>
+
+    <form id="form-lead" class="space-y-4 mt-6 popup-form">
+      <div>
+        <label for="lead-nome" class="block text-sm font-medium text-gray-300 mb-1">Nome</label>
+        <input type="text" id="lead-nome" name="nome" required placeholder="Seu nome completo" class="w-full px-4 py-3 rounded-lg bg-brand-bg border border-white/10 text-white placeholder-gray-500 focus:border-brand-primary focus:ring-1 focus:ring-brand-primary outline-none transition">
+      </div>
+      <div>
+        <label for="lead-email" class="block text-sm font-medium text-gray-300 mb-1">Email</label>
+        <input type="email" id="lead-email" name="email" required placeholder="seu@email.com" class="w-full px-4 py-3 rounded-lg bg-brand-bg border border-white/10 text-white placeholder-gray-500 focus:border-brand-primary focus:ring-1 focus:ring-brand-primary outline-none transition">
+      </div>
+      <div>
+        <label for="lead-phone" class="block text-sm font-medium text-gray-300 mb-1">Telefone</label>
+        <div class="flex rounded-lg overflow-hidden border border-white/10 focus-within:border-brand-primary focus-within:ring-1 focus-within:ring-brand-primary bg-brand-bg">
+          <span class="inline-flex items-center px-4 py-3 bg-brand-primary text-black font-bold select-none shrink-0">+55</span>
+          <input type="tel" id="lead-phone" name="phone" required placeholder="(11) 99999-9999" maxlength="15" autocomplete="tel" class="flex-1 px-4 py-3 bg-transparent text-white placeholder-gray-500 outline-none min-w-0 mask-telefone">
+        </div>
+        <p class="error-msg text-red-400 text-xs mt-1 hidden">Informe o DDD e o número completo.</p>
+      </div>
+      <button type="submit" class="w-full bg-brand-primary text-white font-sans font-bold py-4 rounded-xl uppercase tracking-widest hover:shadow-[0_0_20px_rgba(253,25,29,0.6)] transition btn-submit mt-2">
+        Avançar para Pagamento
+      </button>
+    </form>
+  </div>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ once: true, offset: 50, duration: 1000, easing: 'ease-out-cubic' });
+
+  document.querySelectorAll('.glass, .glass-strong, .btn-checkout-trigger').forEach((el) => {
+    el.addEventListener('pointermove', (e) => {
+      const rect = el.getBoundingClientRect();
+      el.style.setProperty('--x', ((e.clientX - rect.left) / rect.width) * 100 + '%');
+      el.style.setProperty('--y', ((e.clientY - rect.top) / rect.height) * 100 + '%');
+    });
+  });
+
+  document.querySelectorAll('.has-grid-fx').forEach((section) => {
+    section.addEventListener('pointermove', (e) => {
+      const rect = section.getBoundingClientRect();
+      section.style.setProperty('--gx', ((e.clientX - rect.left) / rect.width) * 100 + '%');
+      section.style.setProperty('--gy', ((e.clientY - rect.top) / rect.height) * 100 + '%');
+    });
+    section.addEventListener('pointerenter', () => section.classList.add('grid-active'));
+    section.addEventListener('pointerleave', () => section.classList.remove('grid-active'));
+  });
+
+  document.querySelectorAll('.faq-trigger').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      btn.closest('.faq-item').classList.toggle('is-open');
+    });
+  });
+
+  document.querySelectorAll('.card-tilt').forEach((card) => {
+    const maxTilt = 14;
+    card.addEventListener('pointermove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const px = (e.clientX - rect.left) / rect.width;
+      const py = (e.clientY - rect.top) / rect.height;
+      const rotateY = (px - 0.5) * maxTilt * 2;
+      const rotateX = (0.5 - py) * maxTilt * 2;
+      card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.04,1.04,1.04)`;
+      card.style.setProperty('--mx', (px * 100) + '%');
+      card.style.setProperty('--my', (py * 100) + '%');
+      card.classList.add('is-tilting');
+    });
+    card.addEventListener('pointerleave', () => {
+      card.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) scale3d(1,1,1)';
+      card.classList.remove('is-tilting');
+    });
+  });
+
+
+  const phoneInput = document.getElementById('lead-phone');
+  phoneInput.addEventListener('input', () => {
+    let v = phoneInput.value.replace(/\D/g, '').slice(0, 11);
+    if (v.length > 6) {
+      v = `(${v.slice(0,2)}) ${v.slice(2,7)}-${v.slice(7)}`;
+    } else if (v.length > 2) {
+      v = `(${v.slice(0,2)}) ${v.slice(2)}`;
+    } else if (v.length > 0) {
+      v = `(${v}`;
+    }
+    phoneInput.value = v;
+  });
+
+  const modal = document.getElementById('lead-modal');
+  const modalSubtitle = document.getElementById('modal-subtitle');
+  const defaultSubtitle = modalSubtitle.textContent;
+  let pendingCheckout = { url: '', plano: '' };
+
+  const openModal = () => {
+    modal.classList.remove('hidden-modal');
+    document.body.style.overflow = 'hidden';
+  };
+  const closeModal = () => {
+    modal.classList.add('hidden-modal');
+    document.body.style.overflow = '';
+  };
+  document.querySelectorAll('.btn-open-modal').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.getElementById('lotes').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+  document.querySelectorAll('.btn-checkout-trigger').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      pendingCheckout = { url: btn.dataset.checkoutUrl || '', plano: btn.dataset.plano || '' };
+      modalSubtitle.textContent = pendingCheckout.plano ? pendingCheckout.plano : defaultSubtitle;
+      openModal();
+    });
+  });
+  document.querySelectorAll('.btn-close-modal').forEach((btn) => btn.addEventListener('click', closeModal));
+  modal.querySelector('.modal-backdrop').addEventListener('click', closeModal);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  const form = document.getElementById('form-lead');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const submitBtn = form.querySelector('.btn-submit');
+    const originalLabel = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Processando...';
+
+    const params = new URLSearchParams(window.location.search);
+    const utms = {};
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach((key) => {
+      const value = params.get(key);
+      if (value) utms[key] = value;
+    });
+
+    const payload = {
+      nome: document.getElementById('lead-nome').value,
+      email: document.getElementById('lead-email').value,
+      telefone: '+55' + document.getElementById('lead-phone').value.replace(/\D/g, ''),
+      produto: pendingCheckout.plano || 'Congresso Brasileiro de Treinamento Feminino',
+      url: window.location.href,
+      ...utms
+    };
+
+    try {
+      // Webhook ainda não configurado — layout em validação.
+      console.log('Lead capturado:', payload);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalLabel;
+      form.reset();
+      if (pendingCheckout.url && pendingCheckout.url !== '#') {
+        window.location.href = pendingCheckout.url;
+      } else {
+        closeModal();
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
