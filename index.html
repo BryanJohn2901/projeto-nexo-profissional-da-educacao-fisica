@@ -25,9 +25,11 @@
             bg: '#0B0B14',
             surface: '#13131F',
             darkgray: '#0F0F18',
-            primary: '#D4A017',
-            primaryHover: '#A87A0F',
-            accent: '#B000FF',
+            primary: '#F5C518',
+            primaryHover: '#D1A80F',
+            accent: '#FD191D',
+            accentHover: '#D4140F',
+            accent2: '#B000FF',
             success: '#22C55E',
             whatsapp: '#25D366',
             whatsappHover: '#1EBE57',
@@ -47,8 +49,8 @@
             '50%': { transform: 'translateY(-20px)' }
           },
           glowPulse: {
-            '0%, 100%': { boxShadow: '0 0 0 0 rgba(199,155,29,0.55)', transform: 'scale(1)' },
-            '50%': { boxShadow: '0 0 0 16px rgba(199,155,29,0)', transform: 'scale(1.035)' }
+            '0%, 100%': { boxShadow: '0 0 0 0 rgba(253,25,29,0.55)', transform: 'scale(1)' },
+            '50%': { boxShadow: '0 0 0 16px rgba(253,25,29,0)', transform: 'scale(1.035)' }
           },
           glowPulseGreen: {
             '0%, 100%': { boxShadow: '0 0 0 0 rgba(37,211,102,0.65)', transform: 'scale(1)' },
@@ -101,7 +103,7 @@
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    background: radial-gradient(420px circle at var(--x, 50%) var(--y, 50%), rgba(199,155,29,0.16), transparent 70%);
+    background: radial-gradient(420px circle at var(--x, 50%) var(--y, 50%), rgba(253,25,29,0.16), transparent 70%);
     opacity: 0;
     transition: opacity 0.5s ease;
     pointer-events: none;
@@ -140,7 +142,7 @@
   }
   ::-webkit-scrollbar { width: 8px; }
   ::-webkit-scrollbar-track { background: #0B0B14; }
-  ::-webkit-scrollbar-thumb { background: #D4A017; border-radius: 999px; }
+  ::-webkit-scrollbar-thumb { background: #FD191D; border-radius: 999px; }
 
   .popup-form input:invalid.touched {
     border-color: #ef4444;
@@ -207,9 +209,9 @@
 <body class="bg-brand-bg font-sans text-brand-textPrimary antialiased overflow-x-hidden">
 
 <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-  <div class="blob w-[500px] h-[500px] bg-brand-primary top-[-100px] left-[-150px] animate-floatSlow"></div>
-  <div class="blob w-[600px] h-[600px] bg-brand-accent top-[40%] right-[-200px] animate-floatSlow" style="animation-delay: -3s;"></div>
-  <div class="blob w-[400px] h-[400px] bg-brand-primary bottom-[-100px] left-[10%] animate-floatSlow" style="animation-delay: -6s;"></div>
+  <div class="blob w-[500px] h-[500px] bg-brand-accent top-[-100px] left-[-150px] animate-floatSlow"></div>
+  <div class="blob w-[600px] h-[600px] bg-brand-accent2 top-[40%] right-[-200px] animate-floatSlow" style="animation-delay: -3s;"></div>
+  <div class="blob w-[400px] h-[400px] bg-brand-accent bottom-[-100px] left-[10%] animate-floatSlow" style="animation-delay: -6s;"></div>
 </div>
 
 <main>
@@ -232,7 +234,7 @@
 
       <h1 data-aos="fade-up" data-aos-delay="100" class="font-title text-4xl md:text-5xl font-extrabold leading-tight mb-6 max-w-3xl">
         O conhecimento que está moldando o<br>
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">futuro do TREINAMENTO FEMININO</span>.
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent2">futuro do TREINAMENTO FEMININO</span>.
       </h1>
 
       <p data-aos="fade-up" data-aos-delay="200" class="text-brand-textSecondary text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
@@ -241,11 +243,11 @@
 
       <div data-aos="fade-up" data-aos-delay="300" class="flex flex-wrap items-center justify-start gap-4 mb-10">
         <div class="glass rounded-full px-5 py-2.5 flex items-center gap-2 text-sm font-semibold">
-          <i class="fa-regular fa-calendar text-brand-primary"></i>
+          <i class="fa-regular fa-calendar text-brand-accent"></i>
           27 de setembro &bull; Online e ao vivo
         </div>
         <div class="glass rounded-full px-5 py-2.5 flex items-center gap-2 text-sm font-semibold">
-          <i class="fa-solid fa-graduation-cap text-brand-primary"></i>
+          <i class="fa-solid fa-graduation-cap text-brand-accent"></i>
           Certificado digital de 7 horas
         </div>
       </div>
@@ -266,7 +268,7 @@
   </section>
 
   <!-- FAIXA ROLANTE -->
-  <div class="relative z-10 overflow-hidden border-y border-white/5 bg-gradient-to-r from-brand-primary via-brand-accent to-[#FF3D9A] py-3">
+  <div class="relative z-10 overflow-hidden border-y border-white/5 bg-gradient-to-r from-brand-accent via-brand-accent2 to-[#FF3D9A] py-3">
     <div class="marquee-track">
       <span class="flex items-center shrink-0">
         <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">TIMM Eventos</span>
@@ -400,35 +402,35 @@
           <p class="text-brand-textSecondary leading-relaxed mb-8">
             Um encontro online, ao vivo e com vagas limitadas para profissionais que desejam acompanhar as discussões que estão movimentando a Educação Física.
           </p>
-          <button type="button" class="btn-open-modal animate-glow-pulse group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-brand-primary hover:bg-brand-primaryHover px-12 py-5 transition-all duration-500 ease-out hover:-translate-y-0.5 hover:scale-[1.03] cursor-pointer border-0">
+          <button type="button" class="btn-open-modal animate-glow-pulse group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-brand-accent hover:bg-brand-accentHover px-12 py-5 transition-all duration-500 ease-out hover:-translate-y-0.5 hover:scale-[1.03] cursor-pointer border-0">
             <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer"></div>
             <span class="relative text-base font-bold uppercase tracking-[0.2em] text-white">Quero garantir minha vaga</span>
           </button>
         </div>
 
         <div data-aos="fade-left" class="grid grid-cols-2 gap-4">
-          <div class="glass rounded-2xl p-6 text-center hover:-translate-y-1 hover:border-brand-primary/40 transition-all duration-500 ease-out">
+          <div class="glass rounded-2xl p-6 text-center hover:-translate-y-1 hover:border-brand-accent/40 transition-all duration-500 ease-out">
             <div class="w-10 h-10 mx-auto rounded-full bg-brand-primary/10 border border-brand-primary/30 text-brand-primary flex items-center justify-center mb-3">
               <i class="fa-solid fa-sack-dollar text-sm"></i>
             </div>
             <p class="text-3xl font-black text-brand-primary mb-1">R$49,90</p>
             <p class="text-xs uppercase tracking-widest text-brand-gray500">Investimento</p>
           </div>
-          <div class="glass rounded-2xl p-6 text-center hover:-translate-y-1 hover:border-brand-primary/40 transition-all duration-500 ease-out">
+          <div class="glass rounded-2xl p-6 text-center hover:-translate-y-1 hover:border-brand-accent/40 transition-all duration-500 ease-out">
             <div class="w-10 h-10 mx-auto rounded-full bg-brand-primary/10 border border-brand-primary/30 text-brand-primary flex items-center justify-center mb-3">
               <i class="fa-regular fa-clock text-sm"></i>
             </div>
             <p class="text-3xl font-black text-brand-primary mb-1">7 horas</p>
             <p class="text-xs uppercase tracking-widest text-brand-gray500">Carga horária</p>
           </div>
-          <div class="glass rounded-2xl p-6 text-center hover:-translate-y-1 hover:border-brand-primary/40 transition-all duration-500 ease-out">
+          <div class="glass rounded-2xl p-6 text-center hover:-translate-y-1 hover:border-brand-accent/40 transition-all duration-500 ease-out">
             <div class="w-10 h-10 mx-auto rounded-full bg-brand-primary/10 border border-brand-primary/30 text-brand-primary flex items-center justify-center mb-3">
               <i class="fa-solid fa-microphone-lines text-sm"></i>
             </div>
             <p class="text-3xl font-black text-brand-primary mb-1">7</p>
             <p class="text-xs uppercase tracking-widest text-brand-gray500">Palestras</p>
           </div>
-          <div class="glass rounded-2xl p-6 text-center hover:-translate-y-1 hover:border-brand-primary/40 transition-all duration-500 ease-out">
+          <div class="glass rounded-2xl p-6 text-center hover:-translate-y-1 hover:border-brand-accent/40 transition-all duration-500 ease-out">
             <div class="w-10 h-10 mx-auto rounded-full bg-brand-primary/10 border border-brand-primary/30 text-brand-primary flex items-center justify-center mb-3">
               <i class="fa-solid fa-trophy text-sm"></i>
             </div>
@@ -441,7 +443,7 @@
   </section>
 
   <!-- FAIXA ROLANTE -->
-  <div class="relative z-10 overflow-hidden border-y border-white/5 bg-gradient-to-r from-brand-primary via-brand-accent to-[#FF3D9A] py-3">
+  <div class="relative z-10 overflow-hidden border-y border-white/5 bg-gradient-to-r from-brand-accent via-brand-accent2 to-[#FF3D9A] py-3">
     <div class="marquee-track">
       <span class="flex items-center shrink-0">
         <span class="px-6 text-sm font-black uppercase tracking-[0.2em] text-white">R$&nbsp;49,90</span>
@@ -597,7 +599,7 @@
             </div>
           </div>
           <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="100" class="w-full md:w-3/5">
-            <div class="h-1 w-10 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent mb-4"></div>
+            <div class="h-1 w-10 rounded-full bg-gradient-to-r from-brand-accent to-brand-accent2 mb-4"></div>
             <h3 class="text-2xl md:text-3xl font-black text-white mb-3">Carlos Garon</h3>
             <p class="text-brand-textSecondary leading-relaxed mb-5">Treinamento Feminino: estratégias para maximizar a resposta no treino de quadríceps. Você vai sair com ajustes práticos de execução, volume e progressão de carga para aplicar já na próxima sessão com suas alunas.</p>
             <a href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-bold text-brand-primary hover:text-white transition-colors duration-500">
@@ -615,7 +617,7 @@
             </div>
           </div>
           <div data-aos="fade-right" data-aos-duration="900" data-aos-delay="100" class="w-full md:w-3/5">
-            <div class="h-1 w-10 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent mb-4"></div>
+            <div class="h-1 w-10 rounded-full bg-gradient-to-r from-brand-accent to-brand-accent2 mb-4"></div>
             <h3 class="text-2xl md:text-3xl font-black text-white mb-3">Antonio Arruda</h3>
             <p class="text-brand-textSecondary leading-relaxed mb-5">Lipedema: como o exercício pode auxiliar no tratamento. A palestra traz protocolos seguros de treino e cuidados específicos para prescrever com confiança para alunas com esse quadro.</p>
             <a href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-bold text-brand-primary hover:text-white transition-colors duration-500">
@@ -633,7 +635,7 @@
             </div>
           </div>
           <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="100" class="w-full md:w-3/5">
-            <div class="h-1 w-10 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent mb-4"></div>
+            <div class="h-1 w-10 rounded-full bg-gradient-to-r from-brand-accent to-brand-accent2 mb-4"></div>
             <h3 class="text-2xl md:text-3xl font-black text-white mb-3">Santiago Paes</h3>
             <p class="text-brand-textSecondary leading-relaxed mb-5">Periodização para usuários de canetas emagrecedoras. Entenda como ajustar volume, intensidade e recuperação para preservar massa magra durante o uso dessas medicações.</p>
             <a href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-bold text-brand-primary hover:text-white transition-colors duration-500">
@@ -651,7 +653,7 @@
             </div>
           </div>
           <div data-aos="fade-right" data-aos-duration="900" data-aos-delay="100" class="w-full md:w-3/5">
-            <div class="h-1 w-10 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent mb-4"></div>
+            <div class="h-1 w-10 rounded-full bg-gradient-to-r from-brand-accent to-brand-accent2 mb-4"></div>
             <h3 class="text-2xl md:text-3xl font-black text-white mb-3">Luciana Pimenta</h3>
             <p class="text-brand-textSecondary leading-relaxed mb-5">Treinamento para mulheres 40+. Estratégias de periodização, preservação óssea e articular pensadas para essa fase, unindo segurança e resultado estético.</p>
             <a href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-bold text-brand-primary hover:text-white transition-colors duration-500">
@@ -669,7 +671,7 @@
             </div>
           </div>
           <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="100" class="w-full md:w-3/5">
-            <div class="h-1 w-10 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent mb-4"></div>
+            <div class="h-1 w-10 rounded-full bg-gradient-to-r from-brand-accent to-brand-accent2 mb-4"></div>
             <h3 class="text-2xl md:text-3xl font-black text-white mb-3">Fábio Chiodini</h3>
             <p class="text-brand-textSecondary leading-relaxed mb-5">Glúteos 360º: testes, ajustes posturais e estratégias para potencializar resultados. Uma imersão prática em avaliação, correção de compensações e progressão de exercícios para esse grupo muscular.</p>
             <a href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-bold text-brand-primary hover:text-white transition-colors duration-500">
@@ -687,7 +689,7 @@
             </div>
           </div>
           <div data-aos="fade-right" data-aos-duration="900" data-aos-delay="100" class="w-full md:w-3/5">
-            <div class="h-1 w-10 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent mb-4"></div>
+            <div class="h-1 w-10 rounded-full bg-gradient-to-r from-brand-accent to-brand-accent2 mb-4"></div>
             <h3 class="text-2xl md:text-3xl font-black text-white mb-3">Bruno Breno</h3>
             <p class="text-brand-textSecondary leading-relaxed mb-5">Exercício físico no pós-cirurgia bariátrica. Critérios de prescrição por fase pós-operatória, sinais de alerta e adaptações necessárias para treinar essas alunas com segurança.</p>
             <a href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-bold text-brand-primary hover:text-white transition-colors duration-500">
@@ -705,7 +707,7 @@
             </div>
           </div>
           <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="100" class="w-full md:w-3/5">
-            <div class="h-1 w-10 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent mb-4"></div>
+            <div class="h-1 w-10 rounded-full bg-gradient-to-r from-brand-accent to-brand-accent2 mb-4"></div>
             <h3 class="text-2xl md:text-3xl font-black text-white mb-3">Henrique Battista</h3>
             <p class="text-brand-textSecondary leading-relaxed mb-5">Como aumentar o valor da hora-aula sem perder alunos. Um panorama de posicionamento, comunicação de valor e estratégias comerciais para o personal trainer que atua com o público feminino.</p>
             <a href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-bold text-brand-primary hover:text-white transition-colors duration-500">
@@ -717,7 +719,7 @@
       </div>
 
       <div class="text-center mt-12" data-aos="fade-up">
-        <button type="button" class="btn-open-modal animate-glow-pulse group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-brand-primary hover:bg-brand-primaryHover px-12 py-5 transition-all duration-500 ease-out hover:-translate-y-0.5 hover:scale-[1.03] cursor-pointer border-0">
+        <button type="button" class="btn-open-modal animate-glow-pulse group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-brand-accent hover:bg-brand-accentHover px-12 py-5 transition-all duration-500 ease-out hover:-translate-y-0.5 hover:scale-[1.03] cursor-pointer border-0">
           <span class="relative text-base font-bold uppercase tracking-[0.2em] text-white">Quero participar</span>
         </button>
       </div>
@@ -735,10 +737,10 @@
         </p>
         <div class="flex flex-wrap items-center justify-center gap-3">
           <span class="glass rounded-full px-4 py-2 flex items-center gap-2 text-xs font-semibold">
-            <i class="fa-solid fa-calendar-days text-brand-primary"></i> 13 anos de trajetória
+            <i class="fa-solid fa-calendar-days text-brand-accent"></i> 13 anos de trajetória
           </span>
           <span class="glass rounded-full px-4 py-2 flex items-center gap-2 text-xs font-semibold">
-            <i class="fa-solid fa-users text-brand-primary"></i> Milhares de profissionais impactados
+            <i class="fa-solid fa-users text-brand-accent"></i> Milhares de profissionais impactados
           </span>
         </div>
       </div>
@@ -763,7 +765,7 @@
       </div>
 
       <div class="text-center mt-12" data-aos="fade-up">
-        <button type="button" class="btn-open-modal animate-glow-pulse group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-brand-primary hover:bg-brand-primaryHover px-12 py-5 transition-all duration-500 ease-out hover:-translate-y-0.5 hover:scale-[1.03] cursor-pointer border-0">
+        <button type="button" class="btn-open-modal animate-glow-pulse group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-brand-accent hover:bg-brand-accentHover px-12 py-5 transition-all duration-500 ease-out hover:-translate-y-0.5 hover:scale-[1.03] cursor-pointer border-0">
           <span class="relative text-base font-bold uppercase tracking-[0.2em] text-white">Quero garantir minha vaga</span>
         </button>
       </div>
@@ -781,10 +783,10 @@
       <div class="grid md:grid-cols-2 gap-6 items-stretch max-w-3xl mx-auto">
 
         <!-- LOTE 1 -->
-        <button type="button" data-aos="fade-up" data-aos-delay="0" data-checkout-url="#" data-plano="Lote 1 - Acesso Antecipado" class="btn-checkout-trigger group relative flex flex-col text-left w-full cursor-pointer rounded-[24px] border border-brand-primary/70 bg-gradient-to-b from-brand-bg to-[#0d0612] px-8 py-10 md:px-8 md:py-12 shadow-[0_10px_40px_rgba(199,155,29,0.12)] hover:shadow-[0_24px_70px_rgba(199,155,29,0.28)] hover:-translate-y-1.5 transition-all duration-500">
-          <span class="absolute -top-4 left-1/2 -translate-x-1/2 z-20 whitespace-nowrap rounded-md bg-brand-primary px-5 py-1.5 text-[10px] font-black uppercase tracking-[0.16em] text-white shadow-[0_8px_24px_rgba(199,155,29,0.45)]">Mais escolhido</span>
+        <button type="button" data-aos="fade-up" data-aos-delay="0" data-checkout-url="#" data-plano="Lote 1 - Acesso Antecipado" class="btn-checkout-trigger group relative flex flex-col text-left w-full cursor-pointer rounded-[24px] border border-brand-accent/70 bg-gradient-to-b from-brand-bg to-[#0d0612] px-8 py-10 md:px-8 md:py-12 shadow-[0_10px_40px_rgba(253,25,29,0.12)] hover:shadow-[0_24px_70px_rgba(253,25,29,0.28)] hover:-translate-y-1.5 transition-all duration-500">
+          <span class="absolute -top-4 left-1/2 -translate-x-1/2 z-20 whitespace-nowrap rounded-md bg-brand-accent px-5 py-1.5 text-[10px] font-black uppercase tracking-[0.16em] text-white shadow-[0_8px_24px_rgba(253,25,29,0.45)]">Mais escolhido</span>
           <div class="text-center mb-7 pt-2">
-            <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-brand-primary/30 to-brand-primary/5 border border-brand-primary/40 text-brand-primary flex items-center justify-center mb-5 text-xl shadow-[0_0_24px_rgba(199,155,29,0.25)]">
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-brand-accent/30 to-brand-accent/5 border border-brand-accent/40 text-brand-accent flex items-center justify-center mb-5 text-xl shadow-[0_0_24px_rgba(253,25,29,0.25)]">
               <i class="fa-solid fa-bolt"></i>
             </div>
             <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-primary mb-4">Acesso Antecipado</p>
@@ -794,27 +796,27 @@
               <i class="fa-solid fa-arrow-trend-down"></i> Economia de 48% no valor cheio
             </p>
           </div>
-          <div class="h-px w-full bg-gradient-to-r from-transparent via-brand-primary/40 to-transparent mb-7"></div>
+          <div class="h-px w-full bg-gradient-to-r from-transparent via-brand-accent/40 to-transparent mb-7"></div>
           <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-500 mb-4 text-center">O que você recebe</p>
           <ul class="space-y-3 text-[0.95rem] text-gray-300 leading-relaxed">
-            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-circle-check text-brand-primary mt-1 shrink-0 text-sm"></i> <span>Congresso online e ao vivo</span></li>
-            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-circle-check text-brand-primary mt-1 shrink-0 text-sm"></i> <span>Certificado digital de 7 horas</span></li>
-            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-circle-check text-brand-primary mt-1 shrink-0 text-sm"></i> <span>7 palestras com especialistas convidados</span></li>
+            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-circle-check text-brand-accent mt-1 shrink-0 text-sm"></i> <span>Congresso online e ao vivo</span></li>
+            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-circle-check text-brand-accent mt-1 shrink-0 text-sm"></i> <span>Certificado digital de 7 horas</span></li>
+            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-circle-check text-brand-accent mt-1 shrink-0 text-sm"></i> <span>7 palestras com especialistas convidados</span></li>
           </ul>
           <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-amber-400 mt-6 mb-3 text-center">+ Bônus exclusivo</p>
           <div class="rounded-xl bg-amber-400/10 border border-amber-400/15 px-3 py-2.5 text-xs text-gray-200 flex items-center gap-2 mb-8">
             <i class="fa-solid fa-gift text-amber-400 shrink-0"></i> eBook digital exclusivo
           </div>
-          <span class="mt-auto relative overflow-hidden inline-flex w-full items-center justify-center gap-2 bg-brand-primary text-white font-black uppercase py-5 px-6 rounded-xl tracking-[0.12em] text-base whitespace-nowrap animate-glow-pulse group-hover:bg-brand-primaryHover group-hover:shadow-[0_0_0_4px_rgba(199,155,29,0.25)] transition-colors duration-500 ease-out">
+          <span class="mt-auto relative overflow-hidden inline-flex w-full items-center justify-center gap-2 bg-brand-accent text-white font-black uppercase py-5 px-6 rounded-xl tracking-[0.12em] text-base whitespace-nowrap animate-glow-pulse group-hover:bg-brand-accentHover group-hover:shadow-[0_0_0_4px_rgba(253,25,29,0.25)] transition-colors duration-500 ease-out">
             <span class="absolute inset-0 -translate-x-[120%] skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:translate-x-[120%] transition-transform duration-700 ease-out"></span>
             <span class="relative z-10 inline-flex items-center gap-2">Garantir minha vaga <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i></span>
           </span>
         </button>
 
         <!-- LOTE 2 -->
-        <button type="button" data-aos="fade-up" data-aos-delay="100" data-checkout-url="#" data-plano="Lote 2 - Promocional" class="btn-checkout-trigger group relative flex flex-col text-left w-full cursor-pointer rounded-[24px] border border-brand-primary/70 bg-gradient-to-b from-brand-bg to-[#0d0612] px-8 py-10 md:px-8 md:py-12 shadow-[0_10px_40px_rgba(199,155,29,0.12)] hover:shadow-[0_24px_70px_rgba(199,155,29,0.28)] hover:-translate-y-1.5 transition-all duration-500">
+        <button type="button" data-aos="fade-up" data-aos-delay="100" data-checkout-url="#" data-plano="Lote 2 - Promocional" class="btn-checkout-trigger group relative flex flex-col text-left w-full cursor-pointer rounded-[24px] border border-brand-accent/70 bg-gradient-to-b from-brand-bg to-[#0d0612] px-8 py-10 md:px-8 md:py-12 shadow-[0_10px_40px_rgba(253,25,29,0.12)] hover:shadow-[0_24px_70px_rgba(253,25,29,0.28)] hover:-translate-y-1.5 transition-all duration-500">
           <div class="text-center mb-7 pt-2">
-            <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-brand-primary/30 to-brand-primary/5 border border-brand-primary/40 text-brand-primary flex items-center justify-center mb-5 text-xl shadow-[0_0_24px_rgba(199,155,29,0.25)]">
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-brand-accent/30 to-brand-accent/5 border border-brand-accent/40 text-brand-accent flex items-center justify-center mb-5 text-xl shadow-[0_0_24px_rgba(253,25,29,0.25)]">
               <i class="fa-solid fa-ticket"></i>
             </div>
             <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-primary mb-4">Lote Promocional</p>
@@ -824,18 +826,18 @@
               <i class="fa-solid fa-arrow-trend-down"></i> Economia de 45% no valor cheio
             </p>
           </div>
-          <div class="h-px w-full bg-gradient-to-r from-transparent via-brand-primary/40 to-transparent mb-7"></div>
+          <div class="h-px w-full bg-gradient-to-r from-transparent via-brand-accent/40 to-transparent mb-7"></div>
           <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-500 mb-4 text-center">O que você recebe</p>
           <ul class="space-y-3 text-[0.95rem] text-gray-300 leading-relaxed">
-            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-circle-check text-brand-primary mt-1 shrink-0 text-sm"></i> <span>Congresso online e ao vivo</span></li>
-            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-circle-check text-brand-primary mt-1 shrink-0 text-sm"></i> <span>Certificado digital de 7 horas</span></li>
-            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-circle-check text-brand-primary mt-1 shrink-0 text-sm"></i> <span>7 palestras com especialistas convidados</span></li>
+            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-circle-check text-brand-accent mt-1 shrink-0 text-sm"></i> <span>Congresso online e ao vivo</span></li>
+            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-circle-check text-brand-accent mt-1 shrink-0 text-sm"></i> <span>Certificado digital de 7 horas</span></li>
+            <li class="flex gap-3.5 items-start"><i class="fa-solid fa-circle-check text-brand-accent mt-1 shrink-0 text-sm"></i> <span>7 palestras com especialistas convidados</span></li>
           </ul>
           <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-amber-400 mt-6 mb-3 text-center">+ Bônus exclusivo</p>
           <div class="rounded-xl bg-amber-400/10 border border-amber-400/15 px-3 py-2.5 text-xs text-gray-200 flex items-center gap-2 mb-8">
             <i class="fa-solid fa-gift text-amber-400 shrink-0"></i> eBook digital exclusivo
           </div>
-          <span class="mt-auto relative overflow-hidden inline-flex w-full items-center justify-center gap-2 bg-brand-primary text-white font-black uppercase py-5 px-6 rounded-xl tracking-[0.12em] text-base whitespace-nowrap animate-glow-pulse group-hover:bg-brand-primaryHover group-hover:shadow-[0_0_0_4px_rgba(199,155,29,0.25)] transition-colors duration-500 ease-out">
+          <span class="mt-auto relative overflow-hidden inline-flex w-full items-center justify-center gap-2 bg-brand-accent text-white font-black uppercase py-5 px-6 rounded-xl tracking-[0.12em] text-base whitespace-nowrap animate-glow-pulse group-hover:bg-brand-accentHover group-hover:shadow-[0_0_0_4px_rgba(253,25,29,0.25)] transition-colors duration-500 ease-out">
             <span class="absolute inset-0 -translate-x-[120%] skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:translate-x-[120%] transition-transform duration-700 ease-out"></span>
             <span class="relative z-10 inline-flex items-center gap-2">Garantir minha vaga <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i></span>
           </span>
@@ -855,13 +857,13 @@
       </div>
 
       <div class="max-w-3xl mx-auto space-y-4">
-        <div data-aos="fade-up" class="faq-item glass rounded-2xl overflow-hidden hover:border-brand-primary/40 transition-colors duration-500">
+        <div data-aos="fade-up" class="faq-item glass rounded-2xl overflow-hidden hover:border-brand-accent/40 transition-colors duration-500">
           <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 p-6 text-left cursor-pointer">
             <span class="flex items-center gap-4">
-              <span class="shrink-0 w-8 h-8 rounded-full bg-brand-primary/10 border border-brand-primary/30 text-brand-primary flex items-center justify-center text-xs font-black">01</span>
+              <span class="shrink-0 w-8 h-8 rounded-full bg-brand-accent/10 border border-brand-accent/30 text-brand-accent flex items-center justify-center text-xs font-black">01</span>
               <span class="font-bold text-white">Quando acontece?</span>
             </span>
-            <i class="faq-icon fa-solid fa-chevron-down text-brand-primary transition-transform duration-500 shrink-0"></i>
+            <i class="faq-icon fa-solid fa-chevron-down text-brand-accent transition-transform duration-500 shrink-0"></i>
           </button>
           <div class="faq-panel">
             <div class="overflow-hidden">
@@ -870,13 +872,13 @@
           </div>
         </div>
 
-        <div data-aos="fade-up" class="faq-item glass rounded-2xl overflow-hidden hover:border-brand-primary/40 transition-colors duration-500">
+        <div data-aos="fade-up" class="faq-item glass rounded-2xl overflow-hidden hover:border-brand-accent/40 transition-colors duration-500">
           <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 p-6 text-left cursor-pointer">
             <span class="flex items-center gap-4">
-              <span class="shrink-0 w-8 h-8 rounded-full bg-brand-primary/10 border border-brand-primary/30 text-brand-primary flex items-center justify-center text-xs font-black">02</span>
+              <span class="shrink-0 w-8 h-8 rounded-full bg-brand-accent/10 border border-brand-accent/30 text-brand-accent flex items-center justify-center text-xs font-black">02</span>
               <span class="font-bold text-white">O evento será presencial?</span>
             </span>
-            <i class="faq-icon fa-solid fa-chevron-down text-brand-primary transition-transform duration-500 shrink-0"></i>
+            <i class="faq-icon fa-solid fa-chevron-down text-brand-accent transition-transform duration-500 shrink-0"></i>
           </button>
           <div class="faq-panel">
             <div class="overflow-hidden">
@@ -885,13 +887,13 @@
           </div>
         </div>
 
-        <div data-aos="fade-up" class="faq-item glass rounded-2xl overflow-hidden hover:border-brand-primary/40 transition-colors duration-500">
+        <div data-aos="fade-up" class="faq-item glass rounded-2xl overflow-hidden hover:border-brand-accent/40 transition-colors duration-500">
           <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 p-6 text-left cursor-pointer">
             <span class="flex items-center gap-4">
-              <span class="shrink-0 w-8 h-8 rounded-full bg-brand-primary/10 border border-brand-primary/30 text-brand-primary flex items-center justify-center text-xs font-black">03</span>
+              <span class="shrink-0 w-8 h-8 rounded-full bg-brand-accent/10 border border-brand-accent/30 text-brand-accent flex items-center justify-center text-xs font-black">03</span>
               <span class="font-bold text-white">Estudante pode participar?</span>
             </span>
-            <i class="faq-icon fa-solid fa-chevron-down text-brand-primary transition-transform duration-500 shrink-0"></i>
+            <i class="faq-icon fa-solid fa-chevron-down text-brand-accent transition-transform duration-500 shrink-0"></i>
           </button>
           <div class="faq-panel">
             <div class="overflow-hidden">
@@ -900,13 +902,13 @@
           </div>
         </div>
 
-        <div data-aos="fade-up" class="faq-item glass rounded-2xl overflow-hidden hover:border-brand-primary/40 transition-colors duration-500">
+        <div data-aos="fade-up" class="faq-item glass rounded-2xl overflow-hidden hover:border-brand-accent/40 transition-colors duration-500">
           <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 p-6 text-left cursor-pointer">
             <span class="flex items-center gap-4">
-              <span class="shrink-0 w-8 h-8 rounded-full bg-brand-primary/10 border border-brand-primary/30 text-brand-primary flex items-center justify-center text-xs font-black">04</span>
+              <span class="shrink-0 w-8 h-8 rounded-full bg-brand-accent/10 border border-brand-accent/30 text-brand-accent flex items-center justify-center text-xs font-black">04</span>
               <span class="font-bold text-white">Recebo certificado?</span>
             </span>
-            <i class="faq-icon fa-solid fa-chevron-down text-brand-primary transition-transform duration-500 shrink-0"></i>
+            <i class="faq-icon fa-solid fa-chevron-down text-brand-accent transition-transform duration-500 shrink-0"></i>
           </button>
           <div class="faq-panel">
             <div class="overflow-hidden">
@@ -915,13 +917,13 @@
           </div>
         </div>
 
-        <div data-aos="fade-up" class="faq-item glass rounded-2xl overflow-hidden hover:border-brand-primary/40 transition-colors duration-500">
+        <div data-aos="fade-up" class="faq-item glass rounded-2xl overflow-hidden hover:border-brand-accent/40 transition-colors duration-500">
           <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 p-6 text-left cursor-pointer">
             <span class="flex items-center gap-4">
-              <span class="shrink-0 w-8 h-8 rounded-full bg-brand-primary/10 border border-brand-primary/30 text-brand-primary flex items-center justify-center text-xs font-black">05</span>
+              <span class="shrink-0 w-8 h-8 rounded-full bg-brand-accent/10 border border-brand-accent/30 text-brand-accent flex items-center justify-center text-xs font-black">05</span>
               <span class="font-bold text-white">As gravações estão inclusas?</span>
             </span>
-            <i class="faq-icon fa-solid fa-chevron-down text-brand-primary transition-transform duration-500 shrink-0"></i>
+            <i class="faq-icon fa-solid fa-chevron-down text-brand-accent transition-transform duration-500 shrink-0"></i>
           </button>
           <div class="faq-panel">
             <div class="overflow-hidden">
@@ -932,7 +934,7 @@
       </div>
 
       <div class="text-center mt-12" data-aos="fade-up">
-        <button type="button" class="btn-open-modal animate-glow-pulse group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-brand-primary hover:bg-brand-primaryHover px-12 py-5 transition-all duration-500 ease-out hover:-translate-y-0.5 hover:scale-[1.03] cursor-pointer border-0">
+        <button type="button" class="btn-open-modal animate-glow-pulse group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-brand-accent hover:bg-brand-accentHover px-12 py-5 transition-all duration-500 ease-out hover:-translate-y-0.5 hover:scale-[1.03] cursor-pointer border-0">
           <span class="relative text-base font-bold uppercase tracking-[0.2em] text-white">Ainda com dúvida? Garantir minha vaga</span>
         </button>
       </div>
@@ -942,7 +944,7 @@
   <!-- CTA FINAL -->
   <section id="cta-final" class="relative has-grid-fx px-6 py-28">
     <div class="container mx-auto max-w-[1300px] text-center glass-strong rounded-3xl p-12 md:p-16" data-aos="zoom-in">
-      <div class="w-14 h-14 mx-auto rounded-full bg-gradient-to-br from-brand-primary/30 to-brand-primary/5 border border-brand-primary/40 text-brand-primary flex items-center justify-center mb-6 text-xl shadow-[0_0_24px_rgba(199,155,29,0.25)]">
+      <div class="w-14 h-14 mx-auto rounded-full bg-gradient-to-br from-brand-accent/30 to-brand-accent/5 border border-brand-accent/40 text-brand-accent flex items-center justify-center mb-6 text-xl shadow-[0_0_24px_rgba(253,25,29,0.25)]">
         <i class="fa-solid fa-calendar-check"></i>
       </div>
       <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brand-primary mb-4">
@@ -953,11 +955,11 @@
         O treinamento feminino evolui rapidamente. Este congresso reúne especialistas que acompanham essa evolução diariamente e compartilham estratégias para diferentes perfis de alunas.
       </p>
       <div class="flex flex-wrap items-center justify-center gap-4 mb-10 text-sm font-semibold">
-        <span class="glass rounded-full px-5 py-2.5 flex items-center gap-2"><i class="fa-regular fa-calendar text-brand-primary"></i> 27 de setembro</span>
-        <span class="glass rounded-full px-5 py-2.5 flex items-center gap-2"><i class="fa-solid fa-signal text-brand-primary"></i> Online e ao vivo</span>
-        <span class="glass rounded-full px-5 py-2.5 flex items-center gap-2"><i class="fa-solid fa-tag text-brand-primary"></i> Primeiro lote por R$49,90</span>
+        <span class="glass rounded-full px-5 py-2.5 flex items-center gap-2"><i class="fa-regular fa-calendar text-brand-accent"></i> 27 de setembro</span>
+        <span class="glass rounded-full px-5 py-2.5 flex items-center gap-2"><i class="fa-solid fa-signal text-brand-accent"></i> Online e ao vivo</span>
+        <span class="glass rounded-full px-5 py-2.5 flex items-center gap-2"><i class="fa-solid fa-tag text-brand-accent"></i> Primeiro lote por R$49,90</span>
       </div>
-      <button type="button" class="btn-open-modal animate-glow-pulse group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-brand-primary hover:bg-brand-primaryHover px-14 py-6 transition-all duration-500 ease-out hover:-translate-y-0.5 hover:scale-[1.03] cursor-pointer border-0">
+      <button type="button" class="btn-open-modal animate-glow-pulse group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-brand-accent hover:bg-brand-accentHover px-14 py-6 transition-all duration-500 ease-out hover:-translate-y-0.5 hover:scale-[1.03] cursor-pointer border-0">
         <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer"></div>
         <span class="relative text-base font-bold uppercase tracking-[0.2em] text-white">Quero garantir minha vaga</span>
       </button>
@@ -1051,21 +1053,21 @@
     <form id="form-lead" class="space-y-4 mt-6 popup-form">
       <div>
         <label for="lead-nome" class="block text-sm font-medium text-gray-300 mb-1">Nome</label>
-        <input type="text" id="lead-nome" name="nome" required placeholder="Seu nome completo" class="w-full px-4 py-3 rounded-lg bg-brand-bg border border-white/10 text-white placeholder-gray-500 focus:border-brand-primary focus:ring-1 focus:ring-brand-primary outline-none transition">
+        <input type="text" id="lead-nome" name="nome" required placeholder="Seu nome completo" class="w-full px-4 py-3 rounded-lg bg-brand-bg border border-white/10 text-white placeholder-gray-500 focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition">
       </div>
       <div>
         <label for="lead-email" class="block text-sm font-medium text-gray-300 mb-1">Email</label>
-        <input type="email" id="lead-email" name="email" required placeholder="seu@email.com" class="w-full px-4 py-3 rounded-lg bg-brand-bg border border-white/10 text-white placeholder-gray-500 focus:border-brand-primary focus:ring-1 focus:ring-brand-primary outline-none transition">
+        <input type="email" id="lead-email" name="email" required placeholder="seu@email.com" class="w-full px-4 py-3 rounded-lg bg-brand-bg border border-white/10 text-white placeholder-gray-500 focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition">
       </div>
       <div>
         <label for="lead-phone" class="block text-sm font-medium text-gray-300 mb-1">Telefone</label>
-        <div class="flex rounded-lg overflow-hidden border border-white/10 focus-within:border-brand-primary focus-within:ring-1 focus-within:ring-brand-primary bg-brand-bg">
-          <span class="inline-flex items-center px-4 py-3 bg-brand-primary text-black font-bold select-none shrink-0">+55</span>
+        <div class="flex rounded-lg overflow-hidden border border-white/10 focus-within:border-brand-accent focus-within:ring-1 focus-within:ring-brand-accent bg-brand-bg">
+          <span class="inline-flex items-center px-4 py-3 bg-brand-accent text-black font-bold select-none shrink-0">+55</span>
           <input type="tel" id="lead-phone" name="phone" required placeholder="(11) 99999-9999" maxlength="15" autocomplete="tel" class="flex-1 px-4 py-3 bg-transparent text-white placeholder-gray-500 outline-none min-w-0 mask-telefone">
         </div>
         <p class="error-msg text-red-400 text-xs mt-1 hidden">Informe o DDD e o número completo.</p>
       </div>
-      <button type="submit" class="w-full bg-brand-primary text-white font-sans font-bold py-4 rounded-xl uppercase tracking-widest hover:shadow-[0_0_20px_rgba(199,155,29,0.6)] transition btn-submit mt-2">
+      <button type="submit" class="w-full bg-brand-accent text-white font-sans font-bold py-4 rounded-xl uppercase tracking-widest hover:shadow-[0_0_20px_rgba(253,25,29,0.6)] transition btn-submit mt-2">
         Avançar para Pagamento
       </button>
     </form>
