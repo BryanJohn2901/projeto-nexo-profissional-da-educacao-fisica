@@ -250,23 +250,23 @@
 <main>
 
   <!-- HERO -->
-  <section id="hero" class="relative isolate overflow-hidden bg-brand-bg md:bg-transparent px-6 pt-0 md:pt-28 pb-20 md:pb-28">
+  <section id="hero" class="relative isolate overflow-hidden bg-brand-bg md:bg-transparent px-6 pt-0 md:pt-40 pb-20 md:pb-40">
     <div class="relative block md:hidden -mx-6 w-[calc(100%+3rem)] max-w-none">
       <img src="img/mobile.webp" alt="Treinamento feminino" class="block w-full h-auto">
       <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-b from-transparent to-brand-bg pointer-events-none"></div>
     </div>
     <div class="hidden md:block absolute inset-0 -z-10">
-      <img src="img/web.webp" alt="Treinamento feminino" class="w-full h-full object-cover object-[70%_30%]">
+      <img src="img/web.webp" alt="Treinamento feminino" class="w-full h-full object-cover object-[70%_15%]">
       <div class="absolute inset-0 bg-gradient-to-r from-brand-bg/70 via-brand-bg/40 to-brand-bg/10"></div>
       <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(11,11,20,0.35) 0%, rgba(11,11,20,0.2) 55%, rgba(11,11,20,0.2) 78%, rgba(11,11,20,0) 100%);"></div>
     </div>
-    <div class="container mx-auto max-w-[1300px] text-center md:text-left flex flex-col items-center md:items-start pt-8 md:pt-0">
+    <div class="container mx-auto max-w-[1300px] text-center md:text-left flex flex-col items-center md:items-start pt-8 md:pt-16">
 
       <img src="img/logo-color.svg" alt="TIMM Eventos" data-aos="fade-up" class="h-16 md:h-14 w-auto mb-8 mx-auto md:mx-0">
 
       <h1 data-aos="fade-up" data-aos-delay="100" class="font-title text-4xl md:text-5xl font-extrabold leading-tight mb-6 max-w-3xl">
-        O conhecimento que está moldando o<br class="hidden md:inline">
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent2">futuro do TREINAMENTO FEMININO</span>.
+        O conhecimento que está<br class="hidden md:inline">
+        moldando o <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent2">futuro do TREINAMENTO FEMININO</span>.
       </h1>
 
       <p data-aos="fade-up" data-aos-delay="200" class="text-brand-textSecondary text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
@@ -285,8 +285,8 @@
       </div>
 
       <div data-aos="zoom-in" data-aos-delay="400" class="mb-10">
-        <p class="text-brand-gray500 text-sm line-through">De R$97</p>
-        <p class="font-title text-4xl md:text-5xl font-extrabold text-white">Por apenas <span class="text-brand-primary">R$49,90</span></p>
+        <p class="text-brand-gray500 text-2xl line-through">De R$97</p>
+        <p class="font-title text-4xl md:text-5xl font-extrabold text-white">Por <span class="text-brand-primary">R$49,90</span></p>
       </div>
 
       <button type="button" data-aos="zoom-in" data-aos-delay="500" class="btn-open-modal animate-glow-pulse-green group relative inline-flex w-full md:w-auto items-center justify-center gap-3 overflow-hidden rounded-xl bg-brand-whatsapp hover:bg-brand-whatsappHover px-6 md:px-12 py-5 transition-all duration-500 ease-out hover:-translate-y-0.5 hover:scale-[1.03] cursor-pointer border-0">
@@ -846,10 +846,10 @@
         </button>
 
         <!-- LOTE 2 -->
-        <button type="button" data-aos="fade-up" data-aos-delay="100" data-checkout-url="#" data-plano="Lote 2 - Promocional" class="btn-checkout-trigger group relative flex flex-col text-left w-full cursor-pointer rounded-[24px] border border-brand-accent/70 bg-gradient-to-b from-brand-bg to-[#0d0612] px-8 py-10 md:px-8 md:py-12 shadow-[0_10px_40px_rgba(253,25,29,0.12)] hover:shadow-[0_24px_70px_rgba(253,25,29,0.28)] hover:-translate-y-1.5 transition-all duration-500">
+        <button type="button" disabled aria-disabled="true" data-plano="Lote 2 - Promocional" class="relative flex flex-col text-left w-full rounded-[24px] border border-brand-accent/20 bg-gradient-to-b from-brand-bg to-[#0d0612] px-8 py-10 md:px-8 md:py-12 opacity-50 grayscale saturate-50 cursor-not-allowed pointer-events-none select-none">
           <div class="text-center mb-7 pt-2">
             <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-brand-accent/30 to-brand-accent/5 border border-brand-accent/40 text-brand-accent flex items-center justify-center mb-5 text-xl shadow-[0_0_24px_rgba(253,25,29,0.25)]">
-              <i class="fa-solid fa-ticket"></i>
+              <i class="fa-solid fa-lock"></i>
             </div>
             <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-primary mb-4">Lote Promocional</p>
             <p class="text-gray-500 line-through text-sm mb-1">De R$&nbsp;127,00</p>
@@ -869,9 +869,8 @@
           <div class="rounded-xl bg-amber-400/10 border border-amber-400/15 px-3 py-2.5 text-xs text-gray-200 flex items-center gap-2 mb-8">
             <i class="fa-solid fa-gift text-amber-400 shrink-0"></i> eBook digital exclusivo
           </div>
-          <span class="mt-auto relative overflow-hidden inline-flex w-full items-center justify-center gap-2 bg-gradient-to-r from-brand-accent via-brand-accent2 to-[#FF3D9A] text-white font-black uppercase py-5 px-6 rounded-xl tracking-[0.12em] text-base whitespace-nowrap animate-glow-pulse group-hover:brightness-110 group-hover:shadow-[0_0_0_4px_rgba(253,25,29,0.25)] transition-colors duration-500 ease-out">
-            <span class="absolute inset-0 -translate-x-[120%] skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:translate-x-[120%] transition-transform duration-700 ease-out"></span>
-            <span class="relative z-10 inline-flex items-center gap-2">Garantir minha vaga <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i></span>
+          <span class="mt-auto relative inline-flex w-full items-center justify-center gap-2 bg-gray-700 text-gray-300 font-black uppercase py-5 px-6 rounded-xl tracking-[0.12em] text-base whitespace-nowrap">
+            <span class="relative z-10 inline-flex items-center gap-2"><i class="fa-solid fa-lock"></i> Em breve</span>
           </span>
         </button>
 
